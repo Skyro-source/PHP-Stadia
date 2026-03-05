@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color:whitesmoke;
+    background-color: rgba(20, 20, 20, 1);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+    } 
+}
+
+header{
+    display: flex;
+    height: 10%;
+    width: auto;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #1a1a1a;
+}
+
+header, header > a{
+    background-color: #1a1a1a;
+}
+
+#logo{
+    width: 277px;
+    height: auto;
+    justify-content: center;
+    background-color: #1a1a1a;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+}
+
+#insc{
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    transition: background-color 0.5s;
+    color: black;
+    font-size: larger;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+}
+
+#insc:hover{
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s;
+    background-color: #BC1A4B;
+    color: black;
+    font-size: larger;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+}
+
+#co{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-top: 200px;
+    border-radius: 20px;
+}
+
+label{
+    font-size: larger;
+    background-color: #1a1a1a;
+    margin: 3px;
+}
+
+#txtCo{
+    font-size: xx-large;
+    background-color: #1a1a1a;
+    padding-bottom: 25px;
+}
+
+#formCo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+input{
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    margin: 5px;
+    text-align: center;
+    font-size: large;
+}
+
+#valider{
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    transition: background-color 0.5s;
+    color: black;
+    font-size: larger;
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 15px;
+}
+
+#valider:hover{
+    display: flex;
+    align-items: center;
+    background-color: #ff4c1d;
+    transition: background-color 0.5s;
+    color: black;
+    font-size: larger;
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 15px;
+}
+
+footer{
+    height: 10%;
+    width: auto;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-child{
+    width: 25%;
+}
