@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Se connecter/S'inscire</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="../CSS/style_inscription.css">
 </head>
 <body id="main">
     <header>
         <a href="page_principale.php" id="reflogo"><img id="logo" src="../Images/logo.png"></a>
         <a href="connexion.php" id="co">Connexion</a>
-=======
-    <link rel="stylesheet" href="style_inscription.css">
-</head>
-<body id="main">
-    <header>
-        <a href="TD_Final.html" id="reflogo"><img id="logo" src="logo.png"></a>
-        <a href="connexion.html" id="co">Connexion</a>
->>>>>>> de134f6881267e8c7dd0c706f195568e9afe43e4
     </header>
 
     <main>

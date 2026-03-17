@@ -1,14 +1,30 @@
 <?php
 
-    /** Variables des infos du formulaire*/
+    /** Vérifier que toutes les cases du formulaires sont remplies */
 
-    $nom = $_POST["nom"];
-    $prenom = $_POST["prenom"];
-    $DTN = $_POST["date_de_naissance"];
-    $pseudo = $_POST["pseudonyme"];
-    $telephone = $_POST["telephone"];
-    $mail = $_POST["email"];
-    $mdp = $_POST["mdp"]; 
+    if (!empty($_POST['nom']) &&
+    !empty($_POST['prenom']) && 
+    !empty($_POST['date_de_naissance']) && 
+    !empty($_POST['pseudonyme']) && 
+    !empty($_POST['telephone']) && 
+    !empty($_POST['email']) && isset($_POST['mdp'])) 
+    {
+        echo '<p>Formulaire rempli</p>';
+    } else {
+        echo '<p>Erreur dans le formulaire</p>';
+        die();
+    }
+
+
+    /** Variables des infos du formulaire, le htmlspecialchars est mis en place pour s'assurer qu'il soit traité comme du texte et éviter les injections SQL*/
+
+    $nom = htmlspecialchars($_POST["nom"]);
+    $prenom = htmlspecialchars($_POST["prenom"]);
+    $DTN = htmlspecialchars($_POST["date_de_naissance"]);
+    $pseudo = htmlspecialchars($_POST["pseudonyme"]);
+    $telephone = htmlspecialchars($_POST["telephone"]);
+    $mail = htmlspecialchars($_POST["email"]);
+    $mdp = htmlspecialchars(password_hash($_POST["mdp"], PASSWORD_DEFAULT)); // Hash le mot de passe pour qu'il soit encrypté dans la BDD
 
     include_once("bdd.php");
 
