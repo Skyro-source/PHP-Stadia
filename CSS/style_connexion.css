@@ -3,27 +3,25 @@
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color:whitesmoke;
+    color: whitesmoke;
     background-color: rgba(20, 20, 20, 1);
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
-    to{
-        opacity: 1;
-    } 
+    to { opacity: 1; }
 }
 
 header{
     display: flex;
-    height: 10%;
-    width: auto;
+    align-items: center;
     justify-content: space-between;
     margin: 20px;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 20px;
     background-color: #1a1a1a;
+    box-sizing: border-box;
 }
 
 header, header > a{
@@ -31,9 +29,8 @@ header, header > a{
 }
 
 #logo{
-    width: 277px;
+    width: clamp(120px, 20vw, 277px);
     height: auto;
-    justify-content: center;
     background-color: #1a1a1a;
 }
 
@@ -48,24 +45,29 @@ a{
     background-color: whitesmoke;
     transition: background-color 0.5s;
     color: black;
-    font-size: larger;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    font-size: clamp(0.85rem, 1.2vw, 1.1rem);
+    padding: 10px 20px;
     border-radius: 15px;
+    white-space: nowrap;
 }
 
 #insc:hover{
-    display: flex;
-    align-items: center;
     transition: background-color 0.5s;
     background-color: #BC1A4B;
     color: black;
-    font-size: larger;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.main-child{
+    flex: 1;
 }
 
 #co{
@@ -73,21 +75,14 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 300px;
+    flex: 2;
     background-color: #1a1a1a;
-    padding: 20px;
-    margin-top: 200px;
+    padding: 40px 30px;
     border-radius: 20px;
 }
 
-label{
-    font-size: larger;
-    background-color: #1a1a1a;
-    margin: 3px;
-}
-
 #txtCo{
-    font-size: xx-large;
+    font-size: clamp(1.4rem, 3vw, 2rem);
     background-color: #1a1a1a;
     padding-bottom: 25px;
 }
@@ -97,60 +92,65 @@ label{
     flex-direction: column;
     align-items: center;
     background-color: #1a1a1a;
+    width: 100%;
+}
+
+label{
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    background-color: #1a1a1a;
+    margin: 3px;
+    align-self: flex-start;
 }
 
 input{
     padding: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
+    width: 100%;
+    max-width: 380px;
     background-color: whitesmoke;
     color: black;
     border: none;
     border-radius: 15px;
-    margin: 5px;
+    margin: 5px 0;
     text-align: center;
-    font-size: large;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    box-sizing: border-box;
 }
 
 #valider{
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: whitesmoke;
     transition: background-color 0.5s;
     color: black;
-    font-size: larger;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     margin-top: 20px;
-    padding: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 12px;
+    width: 100%;
+    max-width: 380px;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 #valider:hover{
-    display: flex;
-    align-items: center;
     background-color: #ff4c1d;
     transition: background-color 0.5s;
-    color: black;
-    font-size: larger;
-    margin-top: 20px;
-    padding: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
-    border-radius: 15px;
 }
 
-footer{
-    height: 10%;
-    width: auto;
-}
+footer{ height: 40px; }
 
-main{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.main-child{
-    width: 25%;
+/* ── RESPONSIVE MOBILE ── */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+    .main-child { display: none; }
+    #co {
+        width: 100%;
+        max-width: 480px;
+        padding: 30px 20px;
+    }
+    input, #valider { max-width: 100%; }
 }

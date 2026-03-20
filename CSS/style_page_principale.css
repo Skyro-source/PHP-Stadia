@@ -1,21 +1,21 @@
 *{
-    margin:0px;
-    padding:0px;
-    color:whitesmoke;
+    margin: 0px;
+    padding: 0px;
+    color: whitesmoke;
     text-decoration: none;
 }
-
 
 #main{
     background-color: rgba(20, 20, 20, 1);
 }
 
 header{
-    display:flex;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #1a1a1a;
-    margin:20px;
-    padding:10px;
+    margin: 20px;
+    padding: 10px 20px;
     border-radius: 20px;
 }
 
@@ -31,7 +31,7 @@ p{
 
 #logo{
     background-color: #1a1a1a;
-    width: 15%;
+    width: clamp(120px, 15%, 277px);
     height: auto;
 }
 
@@ -45,8 +45,8 @@ p{
     border-radius: 15px;
     color: black;
     font-size: larger;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px 15px;
+    white-space: nowrap;
 }
 
 #insc:hover{
@@ -59,163 +59,223 @@ p{
     border-radius: 15px;
     color: black;
     font-size: larger;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px 15px;
 }
 
-#bouton_jouer{
+/* ── BANNIÈRE PRINCIPALE ── */
+
+#jeu_principal {
+    position: relative;
+}
+
+#bannière {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#bannière::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(90deg,  rgba(20,20,20,1) 15%, rgba(20,20,20,0) 55%),
+        linear-gradient(0deg,   rgba(20,20,20,1) 3%,  rgba(20,20,20,0) 40%),
+        linear-gradient(180deg, rgba(20,20,20,1) 3%,  rgba(20,20,20,0) 25%);
+}
+
+#BF6banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Éléments superposés sur la bannière */
+#jeu_principal > a,
+#BF6logo,
+#descBF6 {
+    position: absolute;
+    z-index: 3;
+}
+
+/* Logo BF6 */
+#BF6logo {
+    background-color: transparent;
+    width: clamp(150px, 22%, 380px);
+    height: auto;
+    bottom: 22%;
+    left: 4%;
+}
+
+/* Description */
+#descBF6 {
+    font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+    background-color: transparent;
+    bottom: 6%;
+    left: 4%;
+    width: clamp(200px, 35%, 520px);
+    line-height: 1.5;
+}
+
+/* Bouton Jouer — ancré sous le logo, aligné à gauche */
+#jeu_principal > a {
+    bottom: 22%;
+    left: calc(4% + clamp(150px, 22%, 380px) + 16px);
+}
+
+#bouton_jouer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 150px;
+    width: clamp(110px, 10vw, 160px);
     height: auto;
     background-color: whitesmoke;
     transition: background-color 0.5s;
     border-radius: 15px;
-    position: absolute;
-    top: 530px;
-    left: 70px;
-    z-index: 3;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
-#bouton_jouer:hover{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 150px;
-    height: auto;
-    transition: background-color 0.5s;
+#bouton_jouer:hover {
     background-color: #ff4c1d;
-    border-radius: 15px;
-    position: absolute;
-    top: 530px;
-    left: 70px;
-    z-index: 3;
-    padding: 5px;
+    transition: background-color 0.5s;
 }
 
-#logo_jouer{
+#logo_jouer {
     background-color: transparent;
-    width: 35%;
-    height: 35%;
+    width: 30%;
+    height: auto;
 }
 
-#texte_jouer{
+#texte_jouer {
     background-color: transparent;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-}   
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+}
 
-#filtre{
-    background: #141414;
-    background: linear-gradient(90deg,rgba(20, 20, 20, 1) 15%, rgba(87, 199, 133, 0) 50%),
-    linear-gradient(0deg,rgba(20, 20, 20, 1) 3%, rgba(20, 20, 20, 0) 50%),
-    linear-gradient(180deg,rgba(20, 20, 20, 1) 3%, rgba(20, 20, 20, 0) 50%);
+/* ── SECTIONS JEUX ── */
+
+#jeuPlus, #FPS, #platformer {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    margin: 20px;
+    margin-top: 30px;
+    padding: 20px 30px;
+}
+
+#jeuPlus { margin-top: 50px; }
+
+#bannièrePlus,
+#bannièreFPS,
+#bannièrePlatformer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height:auto;
-    position: absolute;
-    top: 110px;
-    left: 0;
-    z-index: 2;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: transparent;
 }
 
-#BF6banner{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+.imgBannière {
+    width: clamp(100px, 12vw, 180px);
     height: auto;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    padding: 0px;
+    border-radius: 8px;
+    transition: width 0.2s, transform 0.2s;
 }
 
-#descBF6{
-    font-size: x-large;
-    background-color: transparent;
-    margin-right: 75%;
-    position: absolute;
-    top: 700px;
-    left: 50px;
-    z-index: 3;
+.imgBannière:hover {
+    width: clamp(120px, 14vw, 210px);
+    transform: scale(1.05);
+    transition: width 0.2s, transform 0.2s;
 }
 
-#BF6logo{
+/* ── RESPONSIVE TABLETTE (768px – 1024px) ── */
+@media (max-width: 1024px) {
+    #BF6logo {
+        width: clamp(120px, 28%, 280px);
+        bottom: 18%;
+    }
 
-    background-color: transparent;
-    position: absolute;
-    width: 25%;
-    height: auto;
-    top: 600px;
-    left: 50px;
-    z-index: 3;
+    #descBF6 {
+        width: clamp(160px, 50%, 400px);
+        font-size: clamp(0.75rem, 1.4vw, 1rem);
+        bottom: 5%;
+    }
+
+    #jeu_principal > a {
+        bottom: 18%;
+        left: calc(4% + clamp(120px, 28%, 280px) + 12px);
+    }
+
+    .imgBannière       { width: clamp(85px, 13vw, 155px); }
+    .imgBannière:hover { width: clamp(100px, 15vw, 175px); }
 }
 
-#jeuPlus{
-    background-color: #1a1a1a;
-    border-radius: 20px;
-    margin:20px;
-    margin-top: 50px;
-    padding: 30px;
-    padding-top: 15px;
-}
+/* ── RESPONSIVE MOBILE (< 768px) ── */
+@media (max-width: 767px) {
+    header {
+        margin: 10px;
+        padding: 8px 12px;
+    }
 
-#bannièrePlus{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: transparent;
-}
+    #logo { width: clamp(90px, 30vw, 160px); }
 
-#FPS{
-    background-color: #1a1a1a;
-    border-radius: 20px;
-    margin:20px;
-    margin-top: 30px;
-    padding: 30px;
-    padding-top: 15px;
-}
+    #insc {
+        font-size: small;
+        padding: 8px 10px;
+        border-radius: 10px;
+    }
 
-#bannièreFPS{    
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: transparent;
-}
+    /* Sur mobile on empile sous la bannière */
+    #jeu_principal {
+        display: flex;
+        flex-direction: column;
+    }
 
-#platformer{
-    background-color: #1a1a1a;
-    border-radius: 20px;
-    margin:20px;
-    margin-top: 30px;
-    padding: 30px;
-    padding-top: 15px;
-}
+    #bannière { order: 1; }
 
-#bannièrePlatformer{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: transparent;
-}
+    #BF6logo,
+    #descBF6,
+    #jeu_principal > a {
+        position: static;
+        transform: none;
+    }
 
-.imgBannière{
-    width: 180px;
-    padding:0px;
-    transition: width 0.2s; 
-    color: white; 
-}
+    #BF6logo {
+        order: 2;
+        width: clamp(120px, 55vw, 220px);
+        margin: 12px auto 0;
+        display: block;
+    }
 
-.imgBannière:hover{
-    width: 220px;
-    transition: width 0.2s;
-    color: white; 
+    #descBF6 {
+        order: 3;
+        font-size: 0.9rem;
+        padding: 10px 15px;
+        background-color: rgba(20,20,20,0.9);
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #jeu_principal > a {
+        order: 4;
+        display: flex;
+        justify-content: center;
+        padding: 12px 0 16px;
+    }
+
+    #bouton_jouer { width: 130px; }
+
+    #jeuPlus, #FPS, #platformer {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .imgBannière       { width: clamp(80px, 40vw, 150px); }
+    .imgBannière:hover { width: clamp(90px, 44vw, 165px); }
 }
