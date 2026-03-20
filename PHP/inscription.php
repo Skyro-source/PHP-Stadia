@@ -37,7 +37,7 @@
                     <input type="password" name="mdp" id="mdp">
                     <label for="conf.mdp">Confirmer le mot de passe</label>
                     <input type="password" name="mdp2" id="conf.mdp">
-                    <input type="submit" id="valider">Valider</a>
+                    <input type="submit" id="valider"></a>
                 </form>
             </div>
 

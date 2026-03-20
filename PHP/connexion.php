@@ -18,12 +18,14 @@
             <p id="txtCo">Connexion<p>
 
             <div id="formCo">
-                <label for="email">Email</label>
-                <input type="email" name="Email" id="email">
-                <br>
-                <label for="mdp">Mot de passe</label>
-                <input type="password" name="Mot de passe" id="mdp">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="valider">Valider</a>
+                <form action="gestion_connexion.php" method=POST>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <br>
+                    <label for="mdp">Mot de passe</label>
+                    <input type="password" name="mdp" id="mdp">
+                    <input type="submit" id="valider"></a>
+                </form>
             </div>
 
         </div>
