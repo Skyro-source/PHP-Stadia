@@ -5,12 +5,6 @@
     text-decoration: none;
     color: whitesmoke;
     background-color: rgba(20, 20, 20, 1);
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    to { opacity: 1; }
 }
 
 header{
@@ -87,6 +81,10 @@ main{
     padding-bottom: 25px;
 }
 
+form{
+    background-color: #1a1a1a;
+}
+
 #formCo{
     display: flex;
     flex-direction: column;
@@ -99,11 +97,14 @@ label{
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     background-color: #1a1a1a;
     margin: 3px;
-    align-self: flex-start;
+    display: flex;
+    justify-content: center;
 }
 
 input{
     padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
     width: 100%;
     max-width: 380px;
     background-color: whitesmoke;
@@ -124,7 +125,7 @@ input{
     transition: background-color 0.5s;
     color: black;
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 12px;
     width: 100%;
     max-width: 380px;

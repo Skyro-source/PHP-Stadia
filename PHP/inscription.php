@@ -44,6 +44,7 @@
                     <br>
                     <label for="conf.mdp">Confirmer le mot de passe</label>
                     <input type="password" name="mdp2" id="conf.mdp">
+                    <br>
                     <input type="submit" id="valider">
                 </form>
             </div>

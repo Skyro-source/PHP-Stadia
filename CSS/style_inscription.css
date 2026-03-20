@@ -4,16 +4,10 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: whitesmoke;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
 }
 
 #main{
     background-color: rgba(20, 20, 20, 1);
-}
-
-@keyframes fadeIn {
-    to { opacity: 1; }
 }
 
 header{
@@ -64,7 +58,7 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 30px 20px;
+    padding: 30px;
     box-sizing: border-box;
 }
 
@@ -79,7 +73,7 @@ main{
     justify-content: center;
     flex: 2;
     background-color: #1a1a1a;
-    padding: 40px 30px;
+    padding: 40px;
     border-radius: 20px;
 }
 
@@ -102,11 +96,14 @@ label{
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     background-color: #1a1a1a;
     margin: 3px;
-    align-self: flex-start;
+    display: flex;
+    justify-content: center;
 }
 
 input{
     padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
     width: 100%;
     max-width: 380px;
     background-color: whitesmoke;
@@ -127,7 +124,7 @@ input{
     transition: background-color 0.5s;
     color: black;
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
     padding: 12px;
     width: 100%;

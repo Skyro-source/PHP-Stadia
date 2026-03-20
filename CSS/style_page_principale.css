@@ -189,9 +189,7 @@ p{
 }
 
 .imgBannière:hover {
-    width: clamp(120px, 14vw, 210px);
-    transform: scale(1.05);
-    transition: width 0.2s, transform 0.2s;
+    transform: scale(1.10);
 }
 
 /* ── RESPONSIVE TABLETTE (768px – 1024px) ── */
