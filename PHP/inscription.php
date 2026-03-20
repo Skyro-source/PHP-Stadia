@@ -23,21 +23,28 @@
                 <form action="gestion_inscription.php" method="POST">
                     <label for="nom">Nom</label>
                     <input type="text" name="nom" id="nom">
+                    <br>
                     <label for="prenom">Prénom</label>
                     <input type="text" name="prenom" id="prenom">
+                    <br>
                     <label for="DTN">Date de naissance</label>
                     <input type="date" name="date_de_naissance" id="DTN">
+                    <br>
                     <label for="pseudo">Pseudonyme</label>
                     <input type="text" name="pseudonyme" id="pseudo">
+                    <br>
                     <label for="tel">Téléphone</label>
                     <input type="tel" name="telephone" id="tel">
+                    <br>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email">
+                    <br>
                     <label for="mdp">Mot de passe</label>
                     <input type="password" name="mdp" id="mdp">
+                    <br>
                     <label for="conf.mdp">Confirmer le mot de passe</label>
                     <input type="password" name="mdp2" id="conf.mdp">
-                    <input type="submit" id="valider"></a>
+                    <input type="submit" id="valider">
                 </form>
             </div>
 

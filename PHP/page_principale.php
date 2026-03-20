@@ -25,7 +25,6 @@
             <p id="descBF6">L'expérience de guerre totale ultime. Dans une guerre de chars, d'avions de chasse et d'arsenaux massifs, votre escouade est l'arme la plus redoutable.</p>   
             <div class="container" id="bannière">
                 <img id="BF6banner" src="../Images/BF6Banner.png" alt="BF6banner">
-                <img id="filtre" src="../Images/HD_transparent_picture.png" alt="HD_transparent_picture">
             </div>
         </div>
 
