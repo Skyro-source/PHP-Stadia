@@ -159,7 +159,7 @@ p{
 
 /* ── SECTIONS JEUX ── */
 
-#jeuPlus, #FPS, #platformer {
+#jeuPlus, #action, #aventure, #rpg, #fps, #sim, #strat, #sport, #course, #survie, #horreur, #plateforme, #inde, #mmo, #br {
     background-color: #1a1a1a;
     border-radius: 20px;
     margin: 20px;
@@ -170,8 +170,21 @@ p{
 #jeuPlus { margin-top: 50px; }
 
 #bannièrePlus,
+#bannièreAction,
+#bannièreAventure, 
+#bannièreRPG,
 #bannièreFPS,
-#bannièrePlatformer {
+#bannièreSim,
+#bannièreStrat,
+#bannièreSport,
+#bannièreCourse,
+#bannièreSurvie,
+#bannièreHorreur,
+#bannièrePlateforme,
+#bannièreInde,
+#bannièreMMO,
+#bannièreBR
+{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

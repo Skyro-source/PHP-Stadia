@@ -1,0 +1,13 @@
+J'avais eu l'idée de mettre tout les genres sur la page principale comme ça l'utilisateur pourrait scroll pendant un moment. Cependant arpès avoir fini de mettre toutes les sections,
+requêtes SQL et autres. Je me rends compte que c'est un peu une idée de merde.
+
+Déjà j'imagine que Januel n'aimerait pas trop voir un fichier PHP qui fait 17Ko avec 429 lignes de code, car on sait tout les deux très bien que ça aurait définitivement pu être compressé en beaucoup moins de lignes de codes.
+
+Et je me rends compte que c'est aussi un peu stupide, parce que l'une des fonctionnalités que je doit coder est litérallement une page montrant tout les jeux, et certes, certains genres ont beaucoup de jeux et ce n'est pas garanti que l'utilisateur puisse tous les voir sans avoir à recharger la page, mais il y'a aussi beaucoup de genre qui ont que deux ou 3 jeux et qui prennent de l'espace inutile. Donc c'est juste complètement redondant.
+
+C'est pout ça que je ne vais pas (ou ne l'ai pas) push sur le main mais sur une branche séparée.
+
+J'ai deux options pour régler ce problème cependant :
+
+    - Garder les 5 genres les plus populaires, c'est ce qui y'a de plus facile, j'ai même pas besoin de recoder, le travail est déjà accompli.
+    - Prendre des genres au hasard, j'avais eu l'idée pendant que je remplissais page_principale.php, je pourrait faire un SELECT pour prendre les genres et enregistrer ces valeurs dans une variable pour ensuite aller récupérer des jeux en fonction du genre que j'ai pris au hasard. C'est pas impossible à coder, mais ça sonne définitivement un peu chiant. Pour le moment je suis un peu chargé donc je vais laisser cette option de côté pour le moment, mais si je termine les autres fonctionnalités plus vite que prévu, je pourrait définitivement y jeter un coup d'oeil (après il faut encore que je termine Pokémon...)

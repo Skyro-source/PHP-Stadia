@@ -5,7 +5,7 @@ session_start(); // Démarrage d'une session
 include_once "bdd.php"; // Connexion à la BDD
 
 try{
-    $sql = "SELECT image, lien FROM jeu ORDER BY RAND()";
+    $sql = "SELECT image, lien FROM jeu";
     $requete = $bdd->prepare($sql);
     $requete->execute();
     $resultat = $requete->fetchAll(PDO::FETCH_ASSOC); // Récupère le résultat
@@ -25,7 +25,7 @@ catch(PDOException $e){
     <link href="../CSS/style_test.css" rel="stylesheet">
 </head>
 <body>
-    <?php foreach (array_slice($resultat, 0, 8)as $row): ?>
+    <?php foreach ($resultat as $row): ?>
     <a href="<?= htmlspecialchars($row['lien']) ?>" ><img src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
     <?php endforeach; ?>
 </body>
