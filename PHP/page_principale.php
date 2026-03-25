@@ -28,45 +28,80 @@
             </div>
         </div>
 
+        <?php
+            // Afficher les images à partir de la BDD
+
+            include_once "bdd.php"; // Connexion à la BDD
+
+            try{
+                $sqlPopulaire = "SELECT image, lien FROM jeu ORDER BY RAND() LIMIT 10";
+                $requete = $bdd->prepare($sqlPopulaire);
+                $requete->execute();
+                $resultatPopulaire = $requete->fetchAll(PDO::FETCH_ASSOC); // Récupère le résultat
+            }
+            catch(PDOException $e){
+                echo "Erreur pour l'affichage";
+                die($e->getMessage());
+            }
+        ?>
+
         <div class="container" id="jeuPlus">
             <h1>Jeux les plus joués</h1>
             <div class="container" id="bannièrePlus">                
-                <a href="https://store.steampowered.com/app/730/CounterStrike_2/"><img class="imgBannière" id="CS2" src="../Images/CS2BannerHorizontal.png" alt="CS2BannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/570/Dota_2/"><img class="imgBannière" id="Dota 2" src="../Images/Dota2BannerHorizontal.png" alt="Dota2BannerHorizontal"></a>
-                <a href="https://store.steampowered.com/agecheck/app/578080/"><img class="imgBannière" id="PUBG" src="../Images/PUBGBannerHorizontal.png" alt="PUBGBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/1172470/Apex_Legends/"><img class="imgBannière" id="Apex" src="../Images/ApexBannerHorizontal.png" alt="ApexBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/2507950/Delta_Force/"><img class="imgBannière" id="Delta Force" src="../Images/DeltaForceBannerHorizontal.png" alt="DeltaForceBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/1808500/ARC_Raiders/"><img class="imgBannière" id="ARC" src="../Images/ARCBannerHorizontal.png" alt="ARCBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/3564740/Where_Winds_Meet/"><img class="imgBannière" id="WWM" src="../Images/WWMBannerHorizontal.png" alt="WWMBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/2807960/Battlefield_6/"><img class="imgBannière" id="BF6" src="../Images/BF6BannerHorizontal.png" alt="BF6BannerHorizontal"></a>
+                <?php foreach (array_slice($resultatPopulaire, 0, 8)as $row): ?>
+                    <a href="<?= htmlspecialchars($row['lien']) ?>" ><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <?php endforeach; ?>
+                <!--Januel m'avait proposé une option super longue pour donner à des images un lien nécessitant un tableau associatif
+                et de faire 25 000 autres trucs pour extraire les données, alors que juste mettre ['lien'] marchait, comme quoi la facilité
+                est la meilleure option... -->
             </div>
         </div>
 
+        <?php
+            include_once "bdd.php";
+
+            try{
+                $sqlAction = "SELECT image, lien FROM jeu WHERE fkGenre = 1 ORDER BY RAND() LIMIT 10";
+                $requete = $bdd->prepare($sqlAction);
+                $requete->execute();
+                $resultatAction = $requete->fetchAll(PDO::FETCH_ASSOC);
+            }
+            catch(PDOException $e){
+                echo "Erreur pour l'affichage";
+                die($e->getMessage());
+            }
+        ?>
+
         <div class="container" id="FPS">
-            <h1>Jeux de tir</h1>
+            <h1>Action</h1>
             <div class="container" id="bannièreFPS">
-                <a href="https://store.steampowered.com/app/2918300/SPLITGATE_Arena_Reloaded/"><img class="imgBannière" id="SG2" src="../Images/SG2BannerHorizontal.png" alt="SG2BannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/440/Team_Fortress_2/"><img class="imgBannière" id="TF2" src="../Images/TF2BannerHorizontal.png" alt="TF2BannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/1240440/Halo_Infinite/"><img class="imgBannière" id="HInfinite" src="../Images/HInfiniteBannerHorizontal.png" alt="HInfiniteBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/2807960/Battlefield_6/"><img class="imgBannière" id="BF6" src="../Images/BF6BannerHorizontal.png" alt="BF6BannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/1237950/STAR_WARS_Battlefront_II/"><img class="imgBannière" id="SWBF2" src="../Images/SWBF2BannerHorizontal.png" alt="SWBF2BannerHorizontal"></a>
-                <a href="https://www.fortnite.com/?lang=fr"><img class="imgBannière" id="FN" src="../Images/FNBannerHorizontal.png" alt="FNBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/3606480/Call_of_Duty_Black_Ops_7/"><img class="imgBannière" id="BO7" src="../Images/BO7BannerHorizontal.png" alt="BO7BannerHorizontal"></a>
-                <a href="https://store.steampowered.com/agecheck/app/578080/"><img class="imgBannière" id="PUBG" src="../Images/PUBGBannerHorizontal.png" alt="PUBGBannerHorizontal"></a>
+                <?php foreach (array_slice($resultatAction, 0, 8)as $row): ?>
+                    <a href="<?= htmlspecialchars($row['lien']) ?>" ><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <?php endforeach; ?>
             </div>    
         </div>
         
+        <?php
+            include_once "bdd.php";
+
+            try{
+                $sqlAventure = "SELECT image, lien FROM jeu WHERE fkGenre = 2 ORDER BY RAND() LIMIT 10";
+                $requete = $bdd->prepare($sqlAventure);
+                $requete->execute();
+                $resultatAventure = $requete->fetchAll(PDO::FETCH_ASSOC);
+            }
+            catch(PDOException $e){
+                echo "Erreur pour l'affichage";
+                die($e->getMessage());
+            }
+        ?>
+
         <div class="container" id="platformer">
-            <h1>Jeux de plateforme</h1>
+            <h1>Aventure</h1>
             <div class="container" id="bannièrePlatformer">
-                <a href="https://store.steampowered.com/app/2513280/SONIC_X_SHADOW_GENERATIONS/"><img class="imgBannière" id="SXSG" src="../Images/SXSGBannerHorizontal.png" alt="SXSGBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/1955230/Pennys_Big_Breakaway/"><img class="imgBannière" id="PBB" src="../Images/PBBBannerHorizontal.png" alt="PBBBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/731490/Crash_Bandicoot_N_Sane_Trilogy/"><img class="imgBannière" id="CBIT" src="../Images/CBITBannerHorizontal.png" alt="CBITBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/242550/Rayman_Legends/"><img class="imgBannière" id="Rayman" src="../Images/RaymanBannerHorizontal.png" alt="RaymanBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/213610/Sonic_Adventure_2/"><img class="imgBannière" id="SA2" src="../Images/SA2BannerHorizontal.png" alt="SA2BannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/253230/A_Hat_in_Time/"><img class="imgBannière" id="AHatInTime" src="../Images/AHatInTimeBannerHorizontal.png" alt="AHatInTimeBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/2985610/The_Big_Catch_Tacklebox/"><img class="imgBannière" id="BigCatch" src="../Images/BigCatchBannerHorizontal.png" alt="BigCatchBannerHorizontal"></a>
-                <a href="https://store.steampowered.com/app/504230/Celeste/"><img class="imgBannière"  class="imgBannière" id="Celeste" src="../Images/CelesteBannerHorizontal.png" alt="CelesteBannerHorizontal"></a>
+                <?php foreach (array_slice($resultatAventure, 0, 8)as $row): ?>
+                    <a href="<?= htmlspecialchars($row['lien']) ?>" ><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>    
