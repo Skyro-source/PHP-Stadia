@@ -28,6 +28,7 @@ catch(PDOException $e){
     <?php foreach (array_slice($resultat, 0, 8)as $row): ?>
     <a href="<?= htmlspecialchars($row['lien']) ?>" ><img src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
     <?php endforeach; ?>
+    <script src="carrousel.js"></script>
 </body>
 </html>
 
