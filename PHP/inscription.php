@@ -9,7 +9,7 @@
 </head>
 <body id="main">
     <header>
-        <a href="page_principale.php" id="reflogo"><img id="logo" src="../Images/logo.png"></a>
+        <a href="acceuil.php" id="reflogo"><img id="logo" src="../Images/logo.png"></a>
         <a href="connexion.php" id="co">Connexion</a>
     </header>
 

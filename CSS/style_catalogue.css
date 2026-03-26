@@ -28,16 +28,6 @@ header, header > a{
     background-color: #1a1a1a;
 }
 
-a{
-    display: flex;
-    justify-content: center;
-}
-
-a{
-    display: flex;
-    justify-content: center;
-}
-
 #insc{
     display: flex;
     align-items: center;
@@ -56,11 +46,28 @@ a{
     color: black;
 }
 
-#jeux {
-    display: flex;
+#jeux a{
+    display: contents;
+}
+
+#jeux{
+    display:flex;
+    justify-content: center;
     flex-wrap: wrap;
+    margin: 20px;
+    padding-top: 30px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
 }
 
 #jeu {
-    width: 50%;
+    width: 10%;
+    height: auto;
+    margin: 20px;
+    border-radius: 8px;
+    transition: width 0.2s, transform 0.2s;
+}
+
+#jeu:hover {
+    transform: scale(1.10);
 }

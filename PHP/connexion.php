@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href="page_principale.php" id="reflogo"><img id="logo" src="../Images/logo.png"></a>
+        <a href="acceuil.php" id="reflogo"><img id="logo" src="../Images/logo.png"></a>
         <a href="inscription.php" id="insc">Inscription</a>
     </header>
 
@@ -25,7 +25,7 @@
                     <br>
                     <label for="mdp">Mot de passe</label>
                     <input type="password" name="mdp" id="mdp">
-                    <input type="submit" id="valider"></a>
+                    <input type="submit" id="valider">
                 </form>
             </div>
 

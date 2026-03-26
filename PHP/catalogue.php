@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <img id="logo" src="../Images/logo.png" alt="logo">
+        <a href="acceuil.php" id="reflogo"><img id="logo" src="../Images/logo.png" alt="logo"></a>
         <a href="connexion.php" id="insc">Se connecter/S'inscrire</a>
     </header>
 
@@ -25,11 +25,10 @@
 
 <!-- Section d'affichage des jeux -->
 
-    <div id="jeux">
+    <div class="container" id="jeux">
         <?php foreach ($resultat as $row): ?>
             <a href="<?= htmlspecialchars($row['lien']) ?>"><img id=jeu src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
         <?php endforeach; ?>
-
     </div>
 </body>
 </html>

@@ -1,3 +1,7 @@
+<?php
+    include_once "gestion_acceuil.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stadia</title>
-    <link href="../CSS/style_page_principale.css" rel="stylesheet">
+    <link href="../CSS/style_acceuil.css" rel="stylesheet">
 </head>
 <body id="main">
         <div class="container">
@@ -17,7 +21,7 @@
         
         <div class="container" id="jeu_principal">
             <div id="hero-info">
-                <img id="BF6logo" src="../Images/BF6logo.png" alt="BF6logo">
+                <img id="BF6logo" src="../Images/Logos/BF6Logo.png" alt="BF6logo">
                 <a href="https://store.steampowered.com/app/2807960/Battlefield_6/" id="lien-jouer">
                     <div id="bouton_jouer">
                         <img src="../Images/Bouton_Jouer.png" id="logo_jouer" alt="logo_jouer">
@@ -39,23 +43,6 @@
             </div>
         </div>
 
-        <?php
-            // Afficher les images à partir de la BDD
-
-            include_once "bdd.php"; // Connexion à la BDD
-
-            try{
-                $sqlPopulaire = "SELECT image, lien FROM jeu ORDER BY RAND() LIMIT 10";
-                $requete = $bdd->prepare($sqlPopulaire);
-                $requete->execute();
-                $resultatPopulaire = $requete->fetchAll(PDO::FETCH_ASSOC); // Récupère le résultat
-            }
-            catch(PDOException $e){
-                echo "Erreur pour l'affichage";
-                die($e->getMessage());
-            }
-        ?>
-
         <div class="container" id="jeuPlus">
             <h1>Jeux les plus joués</h1>
             <div class="container" id="bannièrePlus">                
@@ -64,21 +51,6 @@
                 <?php endforeach; ?>
             </div>
         </div>
-
-        <?php
-            include_once "bdd.php";
-
-            try{
-                $sqlAction = "SELECT image, lien FROM jeu WHERE fkGenre = 1 ORDER BY RAND() LIMIT 10";
-                $requete = $bdd->prepare($sqlAction);
-                $requete->execute();
-                $resultatAction = $requete->fetchAll(PDO::FETCH_ASSOC);
-            }
-            catch(PDOException $e){
-                echo "Erreur pour l'affichage";
-                die($e->getMessage());
-            }
-        ?>
 
         <div class="container" id="FPS">
             <h1>Action</h1>
@@ -89,21 +61,6 @@
             </div>
         </div>
         
-        <?php
-            include_once "bdd.php";
-
-            try{
-                $sqlAventure = "SELECT image, lien FROM jeu WHERE fkGenre = 2 ORDER BY RAND() LIMIT 10";
-                $requete = $bdd->prepare($sqlAventure);
-                $requete->execute();
-                $resultatAventure = $requete->fetchAll(PDO::FETCH_ASSOC);
-            }
-            catch(PDOException $e){
-                echo "Erreur pour l'affichage";
-                die($e->getMessage());
-            }
-        ?>
-
         <div class="container" id="platformer">
             <h1>Aventure</h1>
             <div class="container" id="bannièrePlatformer">
@@ -115,7 +72,7 @@
     </div>
     <script src="../JS/carrousel.js"></script>
     <footer>
-        <h1 align="center" id=placeholder>Placeholder</h1>
+        <a href="catalogue.php" id="catalogue">Afficher tout les jeux</a>
     </footer>
 </body>
 </html>
