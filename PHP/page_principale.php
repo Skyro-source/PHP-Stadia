@@ -15,16 +15,26 @@
         </div>
         
         <div class="container" id="jeu_principal">
-            <a href="https://store.steampowered.com/app/2807960/Battlefield_6/">
-                <div id="bouton_jouer">
-                    <img src="../Images/Bouton_Jouer.png" id="logo_jouer" alt="logo_jouer">
-                    <p id="texte_jouer">Jouer</p>
-                </div>
-            </a>
-            <img id="BF6logo" src="../Images/BF6logo.png" alt="BF6logo">
-            <p id="descBF6">L'expérience de guerre totale ultime. Dans une guerre de chars, d'avions de chasse et d'arsenaux massifs, votre escouade est l'arme la plus redoutable.</p>   
+            <div id="hero-info">
+                <img id="BF6logo" src="../Images/BF6logo.png" alt="BF6logo">
+                <a href="https://store.steampowered.com/app/2807960/Battlefield_6/" id="lien-jouer">
+                    <div id="bouton_jouer">
+                        <img src="../Images/Bouton_Jouer.png" id="logo_jouer" alt="logo_jouer">
+                        <p id="texte_jouer">Jouer</p>
+                    </div>
+                </a>
+                <p id="descBF6">L'expérience de guerre totale ultime. Dans une guerre de chars, d'avions de chasse et d'arsenaux massifs, votre escouade est l'arme la plus redoutable.</p>
+            </div>
             <div class="container" id="bannière">
-                <img id="BF6banner" src="../Images/BannerHorizontal/BF6BannerHorizontal.jpg" alt="BF6banner">
+                <img class="slide-banner active" src="../Images/BannerHorizontal/BF6BannerHorizontal.jpg" alt="BF6banner">
+                <img class="slide-banner" src="../Images/BannerHorizontal/CS2BannerHorizontal.jpg" alt="CS2banner">
+                <img class="slide-banner" src="../Images/BannerHorizontal/TF2BannerHorizontal.jpg" alt="TF2banner">
+            </div>
+            <!-- Navigation par points pour le slideshow héro -->
+            <div id="hero-buttons">
+                <button class="point active" onclick="changerImage(0)"></button>
+                <button class="point" onclick="changerImage(1)"></button>
+                <button class="point" onclick="changerImage(2)"></button>
             </div>
         </div>
 
@@ -48,12 +58,9 @@
         <div class="container" id="jeuPlus">
             <h1>Jeux les plus joués</h1>
             <div class="container" id="bannièrePlus">                
-                <?php foreach (array_slice($resultatPopulaire, 0, 8)as $row): ?>
-                    <a href="<?= htmlspecialchars($row['lien']) ?>" ><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <?php foreach (array_slice($resultatPopulaire, 0, 8) as $row): ?>
+                    <a href="<?= htmlspecialchars($row['lien']) ?>"><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
                 <?php endforeach; ?>
-                <!--Januel m'avait proposé une option super longue pour donner à des images un lien nécessitant un tableau associatif
-                et de faire 25 000 autres trucs pour extraire les données, alors que juste mettre ['lien'] marchait, comme quoi la facilité
-                est la meilleure option... -->
             </div>
         </div>
 
@@ -75,10 +82,10 @@
         <div class="container" id="FPS">
             <h1>Action</h1>
             <div class="container" id="bannièreFPS">
-                <?php foreach (array_slice($resultatAction, 0, 8)as $row): ?>
-                    <a href="<?= htmlspecialchars($row['lien']) ?>" ><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <?php foreach (array_slice($resultatAction, 0, 8) as $row): ?>
+                    <a href="<?= htmlspecialchars($row['lien']) ?>"><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
                 <?php endforeach; ?>
-            </div>    
+            </div>
         </div>
         
         <?php
@@ -99,11 +106,13 @@
         <div class="container" id="platformer">
             <h1>Aventure</h1>
             <div class="container" id="bannièrePlatformer">
-                <?php foreach (array_slice($resultatAventure, 0, 8)as $row): ?>
-                    <a href="<?= htmlspecialchars($row['lien']) ?>" ><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <?php foreach (array_slice($resultatAventure, 0, 8) as $row): ?>
+                    <a href="<?= htmlspecialchars($row['lien']) ?>"><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
                 <?php endforeach; ?>
             </div>
         </div>
-    </div>    
+    </div>
+
+    <script src="../JS/carrousel.js"></script>
 </body>
 </html>
