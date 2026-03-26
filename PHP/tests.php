@@ -19,6 +19,7 @@ catch(PDOException $e){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="../Images/logo_txt_less.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tests</title>
@@ -26,9 +27,9 @@ catch(PDOException $e){
 </head>
 <body>
     <?php foreach (array_slice($resultat, 0, 8)as $row): ?>
-    <a href="<?= htmlspecialchars($row['lien']) ?>" ><img src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+        <a href="<?= htmlspecialchars($row['lien']) ?>" ><img src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
     <?php endforeach; ?>
-    <script src="carrousel.js"></script>
+
 </body>
 </html>
 

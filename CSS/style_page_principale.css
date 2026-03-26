@@ -246,6 +246,17 @@ p{
     transform: scale(1.10);
 }
 
+footer{
+    background-color: #1a1a1a;
+    border-radius: 20px 20px 0px 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#placeholder{
+padding: 100px;
+}
+
 /* ── RESPONSIVE TABLETTE (768px – 1024px) ── */
 @media (max-width: 1024px) {
     #hero-info {
