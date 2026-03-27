@@ -544,7 +544,25 @@ CREATE TABLE `vue_jeux_complets` (
 --
 DROP TABLE IF EXISTS `vue_jeux_complets`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vue_jeux_complets`  AS SELECT `j`.`id_jeu` AS `id_jeu`, `j`.`nom` AS `nom_jeu`, `d`.`nom` AS `developpeur`, `e`.`nom` AS `editeur`, `g`.`libelle` AS `genre`, `j`.`date_de_sortie` AS `date_de_sortie`, `j`.`note` AS `note` FROM (((((`jeu` `j` join `developpe` `dp` on(`j`.`id_jeu` = `dp`.`id_jeu`)) join `developpeur` `d` on(`dp`.`id_developpeur` = `d`.`id_developpeur`)) join `edite` `ed` on(`j`.`id_jeu` = `ed`.`id_jeu`)) join `editeur` `e` on(`ed`.`id_editeur` = `e`.`id_editeur`)) join `genre` `g` on(`j`.`fkGenre` = `g`.`id_genre`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER 
+VIEW `vue_jeux_complets` AS 
+SELECT 
+    `j`.`id_jeu`          AS `id_jeu`,
+    `j`.`nom`             AS `nom_jeu`,
+    `d`.`nom`             AS `developpeur`,
+    `e`.`nom`             AS `editeur`,
+    `g`.`libelle`         AS `genre`,
+    `j`.`date_de_sortie`  AS `date_de_sortie`,
+    `j`.`note`            AS `note`,
+    `j`.`lien`            AS `lien`,
+    `j`.`image`           AS `image`
+FROM (((((
+    `jeu` `j` 
+    JOIN `developpe` `dp`    ON (`j`.`id_jeu` = `dp`.`id_jeu`)) 
+    JOIN `developpeur` `d`   ON (`dp`.`id_developpeur` = `d`.`id_developpeur`)) 
+    JOIN `edite` `ed`        ON (`j`.`id_jeu` = `ed`.`id_jeu`)) 
+    JOIN `editeur` `e`       ON (`ed`.`id_editeur` = `e`.`id_editeur`)) 
+    JOIN `genre` `g`         ON (`j`.`fkGenre` = `g`.`id_genre`));
 
 --
 -- Index pour les tables déchargées
