@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 25 mars 2026 à 13:52
+-- Généré le : ven. 27 mars 2026 à 10:43
 -- Version du serveur : 10.11.14-MariaDB-0+deb12u2
 -- Version de PHP : 8.2.29
 
@@ -475,7 +475,7 @@ INSERT INTO `jeu` (`id_jeu`, `nom`, `date_de_sortie`, `note`, `lien`, `image`, `
 (81, 'The Sims 4', '2014-09-02', 7, 'https://store.steampowered.com/app/1222670', '../Images/BannerVertical/Sims4BannerVertical.jpg', 5),
 (82, 'Planet Zoo', '2019-11-05', 9, 'https://store.steampowered.com/app/703080', '../Images/BannerVertical/PlanetZooBannerVertical.jpg', 5),
 (83, 'Planet Coaster', '2016-11-17', 9, 'https://store.steampowered.com/app/493340', '../Images/BannerVertical/PlanetCoasterBannerVertical.jpg', 5),
-(84, 'Zoo Tycoon', '2013-10-31', 8, 'https://store.steampowered.com/app/703080', '../Images/BannerVertical/PlanetZooBannerVertical.jpg', 5),
+(84, 'Zoo Tycoon', '2013-10-31', 8, 'https://store.steampowered.com/app/613880', '../Images/BannerVertical/ZooTycoonBannerVertical.jpg', 5),
 (85, 'Banished', '2014-02-18', 8, 'https://store.steampowered.com/app/242920', '../Images/BannerVertical/BanishedBannerVertical.jpg', 5),
 (86, 'Age of Empires II: Definitive Edition', '2019-11-14', 10, 'https://store.steampowered.com/app/813780', '../Images/BannerVertical/AgeOfEmpires2BannerVertical.jpg', 6),
 (87, 'Age of Empires IV', '2021-10-28', 9, 'https://store.steampowered.com/app/1466860', '../Images/BannerVertical/AgeOfEmpires4BannerVertical.jpg', 6),
@@ -535,6 +535,8 @@ CREATE TABLE `vue_jeux_complets` (
 ,`genre` varchar(255)
 ,`date_de_sortie` date
 ,`note` int(2)
+,`lien` varchar(255)
+,`image` varchar(255)
 );
 
 -- --------------------------------------------------------
@@ -544,25 +546,7 @@ CREATE TABLE `vue_jeux_complets` (
 --
 DROP TABLE IF EXISTS `vue_jeux_complets`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER 
-VIEW `vue_jeux_complets` AS 
-SELECT 
-    `j`.`id_jeu`          AS `id_jeu`,
-    `j`.`nom`             AS `nom_jeu`,
-    `d`.`nom`             AS `developpeur`,
-    `e`.`nom`             AS `editeur`,
-    `g`.`libelle`         AS `genre`,
-    `j`.`date_de_sortie`  AS `date_de_sortie`,
-    `j`.`note`            AS `note`,
-    `j`.`lien`            AS `lien`,
-    `j`.`image`           AS `image`
-FROM (((((
-    `jeu` `j` 
-    JOIN `developpe` `dp`    ON (`j`.`id_jeu` = `dp`.`id_jeu`)) 
-    JOIN `developpeur` `d`   ON (`dp`.`id_developpeur` = `d`.`id_developpeur`)) 
-    JOIN `edite` `ed`        ON (`j`.`id_jeu` = `ed`.`id_jeu`)) 
-    JOIN `editeur` `e`       ON (`ed`.`id_editeur` = `e`.`id_editeur`)) 
-    JOIN `genre` `g`         ON (`j`.`fkGenre` = `g`.`id_genre`));
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vue_jeux_complets`  AS SELECT `j`.`id_jeu` AS `id_jeu`, `j`.`nom` AS `nom_jeu`, `d`.`nom` AS `developpeur`, `e`.`nom` AS `editeur`, `g`.`libelle` AS `genre`, `j`.`date_de_sortie` AS `date_de_sortie`, `j`.`note` AS `note`, `j`.`lien` AS `lien`, `j`.`image` AS `image` FROM (((((`jeu` `j` join `developpe` `dp` on(`j`.`id_jeu` = `dp`.`id_jeu`)) join `developpeur` `d` on(`dp`.`id_developpeur` = `d`.`id_developpeur`)) join `edite` `ed` on(`j`.`id_jeu` = `ed`.`id_jeu`)) join `editeur` `e` on(`ed`.`id_editeur` = `e`.`id_editeur`)) join `genre` `g` on(`j`.`fkGenre` = `g`.`id_genre`)) ;
 
 --
 -- Index pour les tables déchargées
