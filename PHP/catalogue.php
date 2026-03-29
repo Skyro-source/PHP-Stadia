@@ -1,7 +1,3 @@
-<?php
-    include_once "gestion_catalogue.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,15 +16,43 @@
 <!-- Section de filtrage --> 
 
     <div id="filtrage">
+        <label>Genre :</label>
+        <select name="genre" id="genre_filtre">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="Action">Action</option>
+            <option value="Aventure">Aventure</option>
+            <option value="RPG">RPG</option>
+            <option value="FPS">FPS</option>
+            <option value="Simulation">Simulation</option>
+            <option value="Stratégie">Stratégie</option>
+            <option value="Sport">Sport</option>
+            <option value="Course">Course</option>
+            <option value="Survie">Survie</option>
+            <option value="Horreur">Horreur</option>
+            <option value="Plateforme">Platformer</option>
+            <option value="Indépendant">Indépendant</option>
+            <option value="MMO">MMO</option>
+            <option value="Battle Royale">Battle Royale</option>
+        </select>
+        <label>Éditeur :
+            <input type="text" name="editeur" id="editeur" onkeyup="suggestionEditeur(this.value)">           
+        </label>
+            <div id="suggEditeur"></div>
+
+        <label>Développeur :
+            <input type="text" name="developpeur" id="developpeur" onkeyup="suggestionDeveloppeur(this.value)">           
+        </label>
+            <div id="suggDeveloppeur"></div>
+
 
     </div>
 
 <!-- Section d'affichage des jeux -->
 
     <div class="container" id="jeux">
-        <?php foreach ($resultat as $row): ?>
-            <a href="<?= htmlspecialchars($row['lien']) ?>"><img id=jeu src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
-        <?php endforeach; ?>
+
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="../JS/recherche.js"></script>
 </body>
 </html>
