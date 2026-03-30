@@ -52,31 +52,45 @@ h1{
     color: black;
 }
 
-#filtrage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1a1a1a;
-}
-
 #jeux a{
     display: contents;
 }
 
-#jeux{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px;
-    padding-top: 30px;
+#action, #aventure, #rpg, #fps, #sim, #strat, #sport, #course, #survie, #horreur, #plateforme, #inde, #mmo, #br {
     background-color: #1a1a1a;
     border-radius: 20px;
+    margin: 20px;
+    margin-top: 30px;
+    padding: 20px 30px;
+}
+
+#bannièreAction,
+#bannièreAventure, 
+#bannièreRPG,
+#bannièreFPS,
+#bannièreSim,
+#bannièreStrat,
+#bannièreSport,
+#bannièreCourse,
+#bannièreSurvie,
+#bannièreHorreur,
+#bannièrePlateforme,
+#bannièreInde,
+#bannièreMMO,
+#bannièreBR
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: transparent;
 }
 
 #jeu {
-    width: 10%;
+    width: clamp(100px, 12vw, 180px);
     height: auto;
-    margin: 20px;
+    padding: 0px;
     border-radius: 8px;
     transition: width 0.2s, transform 0.2s;
 }

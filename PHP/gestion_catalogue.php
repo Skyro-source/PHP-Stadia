@@ -1,76 +1,186 @@
 <?php
 
-session_start();
-include_once "bdd.php";
+    include_once "bdd.php"; // Connexion à la BDD
 
-// Autocomplétion de l'éditeur
-if (isset($_POST['suggestion_editeur']) && !empty($_POST['suggestion_editeur'])) {
-    $editeur = $_POST['suggestion_editeur'] . '%';
-    $sql = "SELECT DISTINCT nom FROM editeur WHERE nom LIKE ?";
-    $requete = $bdd->prepare($sql);
-    $requete->execute([$editeur]);
-    $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
+// Section Action
 
-    if (count($resultat) > 0) { ?>
-        <div class="suggestion">
-            <?php foreach ($resultat as $row) { ?>
-                <div onclick="selectEditeur('<?= htmlspecialchars($row['nom']) ?>')"><?= htmlspecialchars($row['nom']) ?></div>
-            <?php } ?>
-        </div>
-    <?php }
-    exit;
-}
-
-// Autocomplétion du développeur
-if (isset($_POST['suggestion_developpeur']) && !empty($_POST['suggestion_developpeur'])) {
-    $developpeur = $_POST['suggestion_developpeur'] . '%';
-    $sql = "SELECT DISTINCT nom FROM developpeur WHERE nom LIKE ?";
-    $requete = $bdd->prepare($sql);
-    $requete->execute([$developpeur]);
-    $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
-
-    if (count($resultat) > 0) { ?>
-        <div class="suggestion">
-            <?php foreach ($resultat as $row) { ?>
-                <div onclick="selectDeveloppeur('<?= htmlspecialchars($row['nom']) ?>')"><?= htmlspecialchars($row['nom']) ?></div>
-            <?php } ?>
-        </div>
-    <?php }
-    exit;
-}
-
-// Requête principale pour afficher les jeux
-
-$genre = (isset($_POST['genre']) && $_POST['genre'] !== '')
-    ? htmlspecialchars($_POST['genre'])
-    : null;
-
-$editeur = (isset($_POST['editeur']) && $_POST['editeur'] !== '')
-    ? '%' . htmlspecialchars($_POST['editeur']) . '%'
-    : null;
-
-$developpeur = (isset($_POST['developpeur']) && $_POST['developpeur'] !== '')
-    ? '%' . htmlspecialchars($_POST['developpeur']) . '%'
-    : null;
-
-try {
-    $sql = "SELECT image, lien FROM vue_jeux_complets 
-            WHERE (? IS NULL OR genre = ?)
-            AND (? IS NULL OR editeur LIKE ?)
-            AND (? IS NULL OR developpeur LIKE ?)
-            ORDER BY nom_jeu ASC";
-    $requete = $bdd->prepare($sql);
-    $requete->execute([$genre, $genre, $editeur, $editeur, $developpeur, $developpeur]);
-    $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
-
-    foreach ($resultat as $jeu) {
-        echo '<a href="' . htmlspecialchars($jeu['lien']) . '">';
-        echo '<img id="jeu" src="' . htmlspecialchars($jeu['image']) . '">';
-        echo '</a>';
+try{
+    $sqlAction = "SELECT image, lien FROM jeu WHERE fkGenre = 1 ORDER BY RAND() LIMIT 10"; // Contrainte sur fkGenre pour seulement sortir des jeux avec le bon genre
+    $requete = $bdd->prepare($sqlAction);
+    $requete->execute();
+    $resultatAction = $requete->fetchAll(PDO::FETCH_ASSOC);
     }
-} catch (PDOException $e) {
+    catch(PDOException $e){
+        echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Aventure
+
+try{
+    $sqlAventure = "SELECT image, lien FROM jeu WHERE fkGenre = 2 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlAventure);
+    $requete->execute();
+    $resultatAventure = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
     echo "Erreur pour l'affichage";
     die($e->getMessage());
 }
 
+// Section RPG
+
+try{
+    $sqlRPG = "SELECT image, lien FROM jeu WHERE fkGenre = 3 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlRPG);
+    $requete->execute();
+    $resultatRPG = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section FPS
+
+try{
+    $sqlFPS = "SELECT image, lien FROM jeu WHERE fkGenre = 4 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlFPS);
+    $requete->execute();
+    $resultatFPS = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Simulation
+
+try{
+    $sqlSim = "SELECT image, lien FROM jeu WHERE fkGenre = 5 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlSim);
+    $requete->execute();
+    $resultatSim = $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Stratégie
+
+try{
+    $sqlStrat = "SELECT image, lien FROM jeu WHERE fkGenre = 6 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlStrat);
+    $requete->execute();
+    $resultatStrat = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Sport    
+
+try{
+    $sqlSport = "SELECT image, lien FROM jeu WHERE fkGenre = 7 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlSport);
+    $requete->execute();
+    $resultatSport = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Course
+
+try{
+    $sqlCourse = "SELECT image, lien FROM jeu WHERE fkGenre = 8 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlCourse);
+    $requete->execute();
+    $resultatCourse = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Survie    
+
+try{
+    $sqlSurvie = "SELECT image, lien FROM jeu WHERE fkGenre = 9 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlSurvie);
+    $requete->execute();
+    $resultatSurvie = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Horreur
+
+try{
+    $sqlHorreur = "SELECT image, lien FROM jeu WHERE fkGenre = 10 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlHorreur);
+    $requete->execute();
+    $resultatHorreur = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Plateforme
+
+try{
+    $sqlPlatforme = "SELECT image, lien FROM jeu WHERE fkGenre = 11 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlPlatforme);
+    $requete->execute();
+    $resultatPlateforme = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Indépendant
+
+try{
+    $sqlInde = "SELECT image, lien FROM jeu WHERE fkGenre = 12 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlInde);
+    $requete->execute();
+    $resultatInde = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section MMO
+
+try{
+    $sqlMMO = "SELECT image, lien FROM jeu WHERE fkGenre = 13 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlMMO);
+    $requete->execute();
+    $resultatMMO = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
+
+// Section Battle Royale
+
+try{
+    $sqlBR = "SELECT image, lien FROM jeu WHERE fkGenre = 14 ORDER BY RAND() LIMIT 10";
+    $requete = $bdd->prepare($sqlBR);
+    $requete->execute();
+    $resultatBR = $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "Erreur pour l'affichage";
+    die($e->getMessage());
+}
 ?>
