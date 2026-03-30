@@ -16,9 +16,10 @@
 <!-- Section de filtrage --> 
 
     <div id="filtrage">
+        <h1>Filtres</h1>
         <label>Genre :</label>
         <select name="genre" id="genre_filtre">
-            <option disabled selected value> -- select an option -- </option>
+            <option disabled selected value>Sélectionner une option</option>
             <option value="Action">Action</option>
             <option value="Aventure">Aventure</option>
             <option value="RPG">RPG</option>
@@ -38,7 +39,6 @@
             <input type="text" name="editeur" id="editeur" onkeyup="suggestionEditeur(this.value)">           
         </label>
             <div id="suggEditeur"></div>
-
         <label>Développeur :
             <input type="text" name="developpeur" id="developpeur" onkeyup="suggestionDeveloppeur(this.value)">           
         </label>

@@ -28,6 +28,12 @@ header, header > a{
     background-color: #1a1a1a;
 }
 
+h1{
+    font-family: Arial Black;
+    background-color: transparent;
+    padding-bottom: 25px;
+}
+
 #insc{
     display: flex;
     align-items: center;
@@ -44,6 +50,13 @@ header, header > a{
     transition: background-color 0.5s;
     background-color: #BC1A4B;
     color: black;
+}
+
+#filtrage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
 }
 
 #jeux a{
