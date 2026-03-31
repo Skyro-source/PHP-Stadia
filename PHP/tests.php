@@ -6,10 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="test">
-        
-    </div>
+
+    <form>
+    
+    </form>
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
-    <script src="../JS/recherche_auto.js"></script>
+    <script src="../JS/recherche.js"></script>
 </body>
 </html>

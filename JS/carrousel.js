@@ -23,8 +23,10 @@ const logoImg    = document.getElementById('BF6logo');
 const descPara   = document.getElementById('descBF6');
 const lienBouton = document.getElementById('lien-jouer');
 
-function changerImage(i) {
+let indexActuel = 0;
+let intervalle;
 
+function changerImage(i) {
     slides.forEach(s => s.classList.remove('active'));
     heroInfo.classList.add('fade');
 
@@ -40,3 +42,23 @@ function changerImage(i) {
         points[i].classList.add('active');
     }, 400);
 }
+
+function demarrerCarrousel() {
+    clearInterval(intervalle);
+    intervalle = setInterval(() => {
+        indexActuel = (indexActuel + 1) % jeux.length;
+        changerImage(indexActuel);
+    }, 15000);
+}
+
+function changerImageManuellement(i) {
+    indexActuel = i;
+    changerImage(i);
+    demarrerCarrousel();
+}
+
+// Pause on hover
+heroInfo.addEventListener('mouseenter', () => clearInterval(intervalle));
+heroInfo.addEventListener('mouseleave', () => demarrerCarrousel());
+
+demarrerCarrousel();

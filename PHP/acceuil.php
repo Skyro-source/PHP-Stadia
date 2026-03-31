@@ -15,7 +15,10 @@
         <div class="container">
             <header>
                 <img id="logo" src="../Images/logo.png" alt="logo">
-                <a href="connexion.php" id="insc">Se connecter/S'inscrire</a>
+                <div id=inscco>
+                    <a href="connexion.php" id="insc">Se connecter</a>
+                    <a href="inscription.php" id="insc">S'inscrire</a>
+                </div>                
             </header>
         </div>
         
@@ -37,9 +40,9 @@
             </div>
             <!-- Navigation par points pour le slideshow héro -->
             <div id="hero-buttons">
-                <button class="point active" onclick="changerImage(0)"></button>
-                <button class="point" onclick="changerImage(1)"></button>
-                <button class="point" onclick="changerImage(2)"></button>
+                <button class="point active" onclick="changerImageManuellement(0)"></button>
+                <button class="point" onclick="changerImageManuellement(1)"></button>
+                <button class="point" onclick="changerImageManuellement(2)"></button>
             </div>
         </div>
 

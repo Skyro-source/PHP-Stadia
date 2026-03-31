@@ -19,6 +19,7 @@ header{
     border-radius: 20px;
 }
 
+
 h1{
     font-family: Arial Black;
     background-color: transparent;
@@ -46,7 +47,12 @@ p{
     color: black;
     font-size: larger;
     padding: 10px 15px;
+    margin-left: 10px;
     white-space: nowrap;
+}
+
+#inscco {
+    display: flex;
 }
 
 #insc:hover{
