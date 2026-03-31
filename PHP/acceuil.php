@@ -65,7 +65,7 @@
             <h1>Plateforme</h1>
             <div class="container" id="bannièrePlateforme">
                 <?php foreach (array_slice($resultatPlateforme, 0, 8)as $row): ?>
-                    <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                    <a href="<?= htmlspecialchars($row['lien']) ?>" ><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
                 <?php endforeach; ?>
             </div>    
         </div>
