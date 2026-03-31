@@ -61,7 +61,7 @@
             </div>
         </div>
         
-        <div class="container" id="platformer">
+        <div class="container" id="platforme">
             <h1>Plateforme</h1>
             <div class="container" id="bannièrePlateforme">
                 <?php foreach (array_slice($resultatPlateforme, 0, 8)as $row): ?>

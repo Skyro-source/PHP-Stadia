@@ -213,7 +213,7 @@ p{
 
 /* ── SECTIONS JEUX ── */
 
-#jeuPlus, #FPS, #platformer {
+#jeuPlus, #FPS, #platforme {
     background-color: #1a1a1a;
     border-radius: 20px;
     margin: 20px;
@@ -225,7 +225,7 @@ p{
 
 #bannièrePlus,
 #bannièreFPS,
-#bannièrePlatformer {
+#bannièrePlateforme {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
