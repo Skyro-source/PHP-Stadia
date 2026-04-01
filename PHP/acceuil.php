@@ -1,5 +1,5 @@
 <?php
-    include_once "gestion_acceuil.php"
+    include "gestion_jeux.php";
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +54,8 @@
             <h1>Jeux les plus joués</h1>
             <div class="container" id="bannièrePlus">                
                 <?php foreach (array_slice($resultatPopulaire, 0, 8) as $row): ?>
-                    <a href="<?= htmlspecialchars($row['lien']) ?>"><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                    <a href="recup_donnees.php"><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                    <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" id="valeur">
                 <?php endforeach; ?>
             </div>
         </div>
@@ -64,6 +65,7 @@
             <div class="container" id="bannièreFPS">
                 <?php foreach (array_slice($resultatAction, 0, 8) as $row): ?>
                     <a href="<?= htmlspecialchars($row['lien']) ?>"><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                    <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
                 <?php endforeach; ?>
             </div>
         </div>
@@ -73,6 +75,7 @@
             <div class="container" id="bannièrePlateforme">
                 <?php foreach (array_slice($resultatPlateforme, 0, 8)as $row): ?>
                     <a href="<?= htmlspecialchars($row['lien']) ?>" ><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                    <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
                 <?php endforeach; ?>
             </div>    
         </div>

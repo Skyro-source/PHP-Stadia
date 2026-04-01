@@ -1,6 +1,6 @@
 <?php
 
-include "gestion_catalogue.php";
+include "gestion_jeux.php";
 
 ?>
 
@@ -29,6 +29,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreAction">
             <?php foreach (array_slice($resultatAction, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -40,6 +41,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreAventure">
             <?php foreach (array_slice($resultatAventure, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>
     </div>
@@ -51,6 +53,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreRPG">
             <?php foreach (array_slice($resultatRPG, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -62,6 +65,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreFPS">
             <?php foreach (array_slice($resultatFPS, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -73,6 +77,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreSim">
             <?php foreach (array_slice($resultatSim, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -84,6 +89,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreStrat">
             <?php foreach (array_slice($resultatStrat, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -95,6 +101,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreSport">
             <?php foreach (array_slice($resultatSport, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -106,6 +113,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreCourse">
             <?php foreach (array_slice($resultatCourse, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -117,6 +125,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreSurvie">
             <?php foreach (array_slice($resultatSurvie, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -128,6 +137,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreHorreur">
             <?php foreach (array_slice($resultatHorreur, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -139,6 +149,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièrePlateforme">
             <?php foreach (array_slice($resultatPlateforme, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -150,6 +161,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreInde">
             <?php foreach (array_slice($resultatInde, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -161,6 +173,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreMMO">
             <?php foreach (array_slice($resultatMMO, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>
@@ -172,6 +185,7 @@ include "gestion_catalogue.php";
         <div class="container" id="bannièreBR">
             <?php foreach (array_slice($resultatBR, 0, 20)as $row): ?>
                 <a href="<?= htmlspecialchars($row['lien']) ?>" ><img id="jeu" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
+                <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>">
             <?php endforeach; ?>
         </div>    
     </div>

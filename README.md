@@ -16,7 +16,8 @@ La première chose qu'on peut remarquer quand nous lancons le site est que contr
 (A CHANGER)
 Toute les images  et liens sur le site sont chargés depuis la base de données SQL, dont vous pouvez trouver le code dans le dossier... SQL. Pour la section des jeux les plus joués par exemple, nous faisons ensuite cette requête pour récupérer 8 (LIMIT 8) des images de manière aléatoire (ORDER BY RAND()) et leur lien associé :
 
-```    try{
+```    
+    try{
         $sqlPopulaire = "SELECT image, lien FROM jeu ORDER BY RAND() LIMIT 10"; // Variable aléatoire afin de constamment sortir une nouvelle image à l'utilisateur
         $requete = $bdd->prepare($sqlPopulaire);
         $requete->execute();
@@ -30,7 +31,8 @@ Toute les images  et liens sur le site sont chargés depuis la base de données 
 
 Nous affichons ensuite les images sur le site en leur associant le bon lien avec cette fonction PHP : 
 
-``` <?php foreach (array_slice($resultatPopulaire, 0, 8) as $row): ?>
+``` 
+    <?php foreach (array_slice($resultatPopulaire, 0, 8) as $row): ?>
         <a href="<?= htmlspecialchars($row['lien']) ?>"><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
     <?php endforeach; ?>
 ```
@@ -56,7 +58,6 @@ Une autre chose que j'aurais bien aimé faire mais au final que je n'ai pas fait
 
 ## Page inscription
 
-Frr je vais être honnête j'ai la flemme de continuer à écrire, si je voulais vraiment faire ça j'ouvrirais un script, je vais aller un peu coder je pense pour le moment.
 
 
 

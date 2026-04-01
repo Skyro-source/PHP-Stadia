@@ -20,11 +20,10 @@
 
             <div id="formCo">
                 <form action="gestion_connexion.php" method=POST>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" placeholder="Email">
                     <br>
-                    <label for="mdp">Mot de passe</label>
-                    <input type="password" name="mdp" id="mdp">
+                    <br>
+                    <input type="password" name="mdp" id="mdp" placeholder="Mot de passe">
                     <input type="submit" id="valider">
                 </form>
             </div>

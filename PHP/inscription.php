@@ -22,29 +22,28 @@
 
             <div id="formInsc">
                 <form action="gestion_inscription.php" method="POST">
-                    <label for="nom">Nom</label>
-                    <input type="text" name="nom" id="nom">
+                    <input type="text" name="nom" id="nom" placeholder="Nom">
                     <br>
-                    <label for="prenom">Prénom</label>
-                    <input type="text" name="prenom" id="prenom">
                     <br>
-                    <label for="DTN">Date de naissance</label>
-                    <input type="date" name="date_de_naissance" id="DTN">
+                    <input type="text" name="prenom" id="prenom" placeholder="Prénom">
                     <br>
-                    <label for="pseudo">Pseudonyme</label>
-                    <input type="text" name="pseudonyme" id="pseudo">
                     <br>
-                    <label for="tel">Téléphone</label>
-                    <input type="tel" name="telephone" id="tel">
+                    <input type="date" name="date_de_naissance" id="DTN" placeholder="Date de naissance">
                     <br>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
                     <br>
-                    <label for="mdp">Mot de passe</label>
-                    <input type="password" name="mdp" id="mdp">
+                    <input type="text" name="pseudonyme" id="pseudo" placeholder="Pseudonyme">
                     <br>
-                    <label for="conf.mdp">Confirmer le mot de passe</label>
-                    <input type="password" name="mdp2" id="conf.mdp">
+                    <br>
+                    <input type="tel" name="telephone" id="tel" placeholder="Téléphone">
+                    <br>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <br>
+                    <br>
+                    <input type="password" name="mdp" id="mdp" placeholder="Mot de passe">
+                    <br>
+                    <br>
+                    <input type="password" name="mdp2" id="conf.mdp" placeholder="Confirmer le mot de passe">
                     <br>
                     <input type="submit" id="valider">
                 </form>
