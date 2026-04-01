@@ -6,7 +6,6 @@ function showResult(str) {
     }
     var xmlhttp=new XMLHttpRequest();
 
-    // If specified, responseType must be empty string or "text"
     xmlhttp.responseType = "json";
 
     xmlhttp.onreadystatechange=function() {

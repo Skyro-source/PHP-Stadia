@@ -15,7 +15,7 @@
         <div class="container">
             <header>
                 <img id="logo" src="../Images/logo.png" alt="logo">
-                <div>
+                <div id="search-wrapper">
                     <input type="text" id="recherche" placeholder="Rechercher..." onkeyup="showResult(this.value)">
                     <div id="livesearch"></div>
                 </div>
