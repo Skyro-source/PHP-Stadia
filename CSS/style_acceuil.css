@@ -56,17 +56,19 @@ p{
 }
 
 #insc:hover{
-    display: flex;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
     transition: background-color 0.5s;
     background-color: #BC1A4B;
-    border: none;
-    border-radius: 15px;
-    color: black;
-    font-size: larger;
-    padding: 10px 15px;
 }
+
+#recherche{
+    color: black;
+    padding: 10px 50px 10px 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+}
+
+
 
 /* ── BANNIÈRE PRINCIPALE ── */
 

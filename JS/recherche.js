@@ -17,7 +17,7 @@ function showResult(str) {
         let html = "";
         if (data && data.length > 0) {
             data.forEach(function(item) {
-                html += "<p>" + item.nom_jeu + "</p>";
+                html += "<p><a href='" + item.lien + "'>" + item.nom_jeu + "</a></p>";
             });
         }
     
@@ -27,6 +27,6 @@ function showResult(str) {
         
       }
     }
-    xmlhttp.open("GET","gestion_test.php?q="+str,true);
+    xmlhttp.open("GET","gestion_recherche.php?q="+str,true);
     xmlhttp.send();
   }

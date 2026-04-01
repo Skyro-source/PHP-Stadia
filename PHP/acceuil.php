@@ -15,6 +15,10 @@
         <div class="container">
             <header>
                 <img id="logo" src="../Images/logo.png" alt="logo">
+                <div>
+                    <input type="text" id="recherche" placeholder="Rechercher..." onkeyup="showResult(this.value)">
+                    <div id="livesearch"></div>
+                </div>
                 <div id=inscco>
                     <a href="connexion.php" id="insc">Se connecter</a>
                     <a href="inscription.php" id="insc">S'inscrire</a>
@@ -78,5 +82,7 @@
     <footer>
         <a href="catalogue.php" id="catalogue">Afficher tout les jeux</a>
     </footer>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script src="../JS/recherche.js"></script>
 </body>
 </html>
