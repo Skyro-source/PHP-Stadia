@@ -14,6 +14,17 @@ function showResult(str) {
 
         data = xmlhttp.response;
         console.log(data);
+        let html = "";
+        if (data && data.length > 0) {
+            data.forEach(function(item) {
+                html += "<p>" + item.nom_jeu + "</p>";
+            });
+        }
+    
+        const div = document.getElementById("livesearch");
+        div.innerHTML = html;
+        div.style.border = data && data.length > 0 ? "1px solid #ccc" : "0px";
+        
       }
     }
     xmlhttp.open("GET","gestion_test.php?q="+str,true);
