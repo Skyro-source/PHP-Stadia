@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-
     <form>
-    
+        <input type="text" size="30" onkeyup="showResult(this.value)">
+        <div id="livesearch"></div>
     </form>
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
     <script src="../JS/recherche.js"></script>
