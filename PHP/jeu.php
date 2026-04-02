@@ -1,3 +1,9 @@
+<?php
+
+include_once "gestion_jeu_spec.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +12,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php foreach (array_slice($resultat, 0, 20)as $row): ?>
+        <img src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
+    <?php endforeach; ?>
 </body>
 </html>

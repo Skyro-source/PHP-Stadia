@@ -1,9 +1,11 @@
 <?php
+session_start();
 
-$id = $_GET["valeur"] ?? '';
+$_SESSION['valeur'] = $_POST["valeur"] ?? '';
+echo $_SESSION['valeur'];
 
-// header("Location: ../PHP/jeu.php?valeur=" . urlencode($id));
-echo $id;
+header("Location: jeu.php");
+
 exit;
 
 ?>

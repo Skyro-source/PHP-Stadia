@@ -10,8 +10,8 @@
         $requete->execute();
         $resultatPopulaire = $requete->fetchAll(PDO::FETCH_ASSOC); // Récupère le résultat
         }
-        catch(PDOException $e){
-            echo "Erreur pour l'affichage";
+    catch(PDOException $e){
+        echo "Erreur pour l'affichage";
         die($e->getMessage());
     }
 
@@ -23,8 +23,8 @@
         $requete->execute();
         $resultatAction = $requete->fetchAll(PDO::FETCH_ASSOC);
         }
-        catch(PDOException $e){
-            echo "Erreur pour l'affichage";
+    catch(PDOException $e){
+        echo "Erreur pour l'affichage";
         die($e->getMessage());
     }
 

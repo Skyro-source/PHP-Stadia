@@ -52,12 +52,16 @@
 
         <div class="container" id="jeuPlus">
             <h1>Jeux les plus joués</h1>
-            <div class="container" id="bannièrePlus">                
+            <div class="container" id="bannièrePlus">              
                 <?php foreach (array_slice($resultatPopulaire, 0, 8) as $row): ?>
-                    <a href="recup_donnees.php"><img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu"></a>
-                    <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" id="valeur">
+                    <form method="POST" action="recup_donnees.php">
+                        <button type="submit">
+                            <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
+                            <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
+                        </button>
+                    </form>
                 <?php endforeach; ?>
-            </div>
+                </div>
         </div>
 
         <div class="container" id="FPS">

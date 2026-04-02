@@ -16,7 +16,14 @@ include "gestion_jeux.php";
 <body>
     <header>
         <a href="acceuil.php" id="reflogo"><img id="logo" src="../Images/logo.png" alt="logo"></a>
-        <a href="connexion.php" id="insc">Se connecter/S'inscrire</a>
+        <div id="search-wrapper">
+            <input type="text" id="recherche" placeholder="Rechercher..." onkeyup="showResult(this.value)">
+            <div id="livesearch"></div>
+        </div>
+        <div id=inscco>
+            <a href="connexion.php" id="insc">Se connecter</a>
+            <a href="inscription.php" id="insc">S'inscrire</a>
+        </div>     
     </header>
 
 <!-- Section d'affichage des jeux -->
@@ -190,5 +197,7 @@ include "gestion_jeux.php";
         </div>    
     </div>
 
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script src="../JS/recherche.js"></script>
 </body>
 </html>
