@@ -16,7 +16,8 @@ function showResult(str) {
         let html = "";
         if (data && data.length > 0) {
             data.forEach(function(item) {
-                html += "<p><a href='" + item.lien + "'>" + item.nom_jeu + "</a></p>";
+                html += "<form method='POST' action='recup_donnees.php'><button type='submit'><p>" + item.nom + "</p><input type='hidden' value='" + item.id_jeu + "'name='valeur'></button></form>"
+                "<p><a href='" + item.lien + "'>" + item.nom + "</a></p>";
             });
         }
     

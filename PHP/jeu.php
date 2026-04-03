@@ -10,7 +10,9 @@ include_once "gestion_jeu_spec.php";
     <link rel="icon" href="../Images/logo_txt_less.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insérer le nom du jeu jeu ici</title>
+    <?php foreach (array_slice($resultat, 0, 20)as $row): ?>
+        <title><?= htmlspecialchars($row['nom']) ?></title>
+    <?php endforeach; ?>
     <link href="../CSS/style_jeu.css" rel="stylesheet">
 </head>
 <body id="main">

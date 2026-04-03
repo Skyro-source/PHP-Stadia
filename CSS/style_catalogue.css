@@ -4,6 +4,9 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: whitesmoke;
+}
+
+#main{
     background-color: rgba(20, 20, 20, 1);
 }
 
@@ -132,7 +135,14 @@ h1{
     background-color: transparent;
 }
 
-#jeu {
+button{
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.imgBannière {
     width: clamp(100px, 12vw, 180px);
     height: auto;
     padding: 0px;
@@ -140,6 +150,7 @@ h1{
     transition: width 0.2s, transform 0.2s;
 }
 
-#jeu:hover {
+.imgBannière:hover {
     transform: scale(1.10);
 }
+

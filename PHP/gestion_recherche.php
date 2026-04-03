@@ -4,10 +4,10 @@
     $q = $_GET['q'];
 
     try{
-        $sql = "SELECT nom_jeu, lien from vue_jeux_complets WHERE nom_jeu LIKE :jeu ";
+        $sql = "SELECT id_jeu, nom FROM jeu WHERE nom LIKE :jeu ";
         $requete = $bdd->prepare($sql);
         $q = "%".$q."%";
-        $requete->bindParam("jeu", $q, PDO::PARAM_STR);
+        $requete->bindParam(":jeu", $q, PDO::PARAM_STR);
         $requete->execute();
         $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
 
