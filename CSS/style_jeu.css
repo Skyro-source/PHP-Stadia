@@ -89,13 +89,26 @@ p{
     transition: background-color 0.5s;
 }
 
-#livesearch a{
+#livesearch button{
     display: block;
     padding: 8px 12px;
+    width: 100%;        
+    text-align: left;   
+    cursor: pointer;
 }
 
-#livesearch a:hover{
+#livesearch button:hover{
     background-color: whitesmoke;
+    color: #1a1a1a;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+#livesearch button:hover p{
     color: #1a1a1a;
 }
 

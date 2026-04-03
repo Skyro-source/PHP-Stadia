@@ -89,10 +89,17 @@ p{
 #livesearch button{
     display: block;
     padding: 8px 12px;
+    width: 100%;        
+    text-align: left;   
+    cursor: pointer;
 }
 
 #livesearch button:hover{
     background-color: whitesmoke;
+    color: #1a1a1a;
+}
+
+#livesearch button:hover p{
     color: #1a1a1a;
 }
 
