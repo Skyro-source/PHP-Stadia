@@ -1,7 +1,5 @@
 <?php
-
-include_once "gestion_jeu_spec.php";
-
+    include_once "gestion_jeu_spec.php";
 ?>
 
 <!DOCTYPE html>
@@ -22,17 +20,24 @@ include_once "gestion_jeu_spec.php";
             <input type="text" id="recherche" placeholder="Rechercher..." onkeyup="showResult(this.value)">
             <div id="livesearch"></div>
         </div>
-        <div id=inscco>
-            <a href="connexion.php" id="insc">Se connecter</a>
-            <a href="inscription.php" id="insc">S'inscrire</a>
-        </div>                
+            <?php if(isset($_SESSION["login"])): ?>
+                <div id=inscco>
+                    <a href="compte.php" id="insc">Compte</a>
+                    <a href="deconnexion.php" id="deco">Se déconnecter</a>
+                </div>
+            <?php else: ?>
+                <div id=inscco>
+                    <a href="connexion.php" id="insc">Se connecter</a>
+                    <a href="inscription.php" id="insc">S'inscrire</a>
+                </div>                
+            <?php endif; ?>  
     </header>
 
     <?php foreach (array_slice($resultat, 0, 20)as $row): ?>
         <div class="container" id="jeu_principal">
             <div id="hero-info">
                 <img id="BF6logo" src="<?= htmlspecialchars($row['logo']) ?>" alt="logo">
-                <a href="<?= htmlspecialchars($row['lien_steam']) ?>" id="lien-jouer">
+                <a href="verif_connexion.php" id="lien-jouer">
                     <div id="bouton_jouer">
                         <img src="../Images/Bouton_Jouer.png" id="logo_jouer" alt="logo_jouer">
                         <p id="texte_jouer">Jouer</p>
@@ -52,11 +57,11 @@ include_once "gestion_jeu_spec.php";
                     <p id="descBF6"><?= htmlspecialchars($row['description']) ?></p>
                 </div>
                 <div>
-                    <p class="info">Note : <?= htmlspecialchars($row['note']) ?>/10</p>
-                    <p class="info">Date de sortie : <?= htmlspecialchars($row['date_de_sortie']) ?></p>
-                    <p class="info">Genre : <?= htmlspecialchars($row['libelle']) ?></p>
-                    <p class="info">Développeur : <?= htmlspecialchars($row['developpeur_nom']) ?></p>
-                    <p class="info">Éditeur : <?= htmlspecialchars($row['editeur_nom']) ?></p>
+                    <p class="info"><strong>Note :</strong> <?= htmlspecialchars($row['note']) ?>/10</p>
+                    <p class="info"><strong>Date de sortie :</strong> <?= htmlspecialchars($row['date_de_sortie']) ?></p>
+                    <p class="info"><strong>Genre :</strong> <?= htmlspecialchars($row['libelle']) ?></p>
+                    <p class="info"><strong>Développeur :</strong> <?= htmlspecialchars($row['developpeur_nom']) ?></p>
+                    <p class="info"><strong>Éditeur :</strong> <?= htmlspecialchars($row['editeur_nom']) ?></p>
                 </div>
             </div>
         </div>

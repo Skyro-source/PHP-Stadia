@@ -36,11 +36,27 @@ p{
     height: auto;
 }
 
+
 #insc{
     display: flex;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: whitesmoke;
+    transition: background-color 0.5s;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    font-size: larger;
+    padding: 10px 15px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+#deco{
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ff4d4d;
     transition: background-color 0.5s;
     border: none;
     border-radius: 15px;
@@ -57,6 +73,10 @@ p{
 
 #insc:hover{
     background-color: #BC1A4B;
+}
+
+#deco:hover{
+    background-color: #ff0000;
 }
 
 #recherche{

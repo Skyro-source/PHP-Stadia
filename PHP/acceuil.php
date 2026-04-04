@@ -1,5 +1,6 @@
 <?php
-    include "gestion_jeux.php";
+    session_start();
+    include "gestion_jeux.php";    
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +20,17 @@
                     <input type="text" id="recherche" placeholder="Rechercher..." onkeyup="showResult(this.value)">
                     <div id="livesearch"></div>
                 </div>
-                <div id=inscco>
-                    <a href="connexion.php" id="insc">Se connecter</a>
-                    <a href="inscription.php" id="insc">S'inscrire</a>
-                </div>                
+                <?php if(isset($_SESSION["login"])): ?>
+                    <div id=inscco>
+                        <a href="compte.php" id="insc">Compte</a>
+                        <a href="deconnexion.php" id="deco">Se déconnecter</a>
+                    </div>
+                <?php else: ?>
+                    <div id=inscco>
+                        <a href="connexion.php" id="insc">Se connecter</a>
+                        <a href="inscription.php" id="insc">S'inscrire</a>
+                    </div>                
+                <?php endif; ?>               
             </header>
         </div>
         
@@ -97,6 +105,7 @@
     <footer>
         <a href="catalogue.php" id="catalogue">Afficher tout les jeux</a>
     </footer>
+
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
     <script src="../JS/recherche.js"></script>
 </body>

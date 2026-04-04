@@ -37,6 +37,16 @@ h1{
     padding-bottom: 25px;
 }
 
+#utilisateur{
+    width: 3%;
+    height: auto;
+    transition: width 0.2s, transform 0.2s;
+}
+
+#utilisateur:hover{
+    transform: scale(1.10);
+}
+
 #insc{
     display: flex;
     align-items: center;
@@ -52,14 +62,31 @@ h1{
     white-space: nowrap;
 }
 
+#deco{
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ff4d4d;
+    transition: background-color 0.5s;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    font-size: larger;
+    padding: 10px 15px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
 #inscco {
     display: flex;
 }
 
 #insc:hover{
-    transition: background-color 0.5s;
     background-color: #BC1A4B;
-    color: black;
+}
+
+#deco:hover{
+    background-color: #ff0000;
 }
 
 #recherche{

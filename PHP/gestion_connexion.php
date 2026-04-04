@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
         if ($mail && password_verify($_POST["mdp"], $utilisateur["mot_de_passe"])){
             $_SESSION["login"] = $utilisateur["email"];
-            echo "Connexion réussie";
+            header("Location: acceuil.php");
         }
         else{
             echo "Veuillez remplir tout les champs";

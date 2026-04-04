@@ -9,5 +9,4 @@
     header("Location: jeu.php");
 
     exit;
-
 ?>
