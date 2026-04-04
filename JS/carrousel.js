@@ -1,8 +1,8 @@
 const jeux = [
     {
-        logo:        '../Images/Logos/BF6Logo.png',
-        description: "L'expérience de guerre totale ultime. Dans une guerre de chars, d'avions de chasse et d'arsenaux massifs, votre escouade est l'arme la plus redoutable.",
-        lien:        'https://store.steampowered.com/app/2807960/Battlefield_6/',             
+        logo:        '../Images/Logos/GTAVLogo.png',
+        description: "Grand Theft Auto V sur PC offre aux joueurs la possibilité d'explorer le monde de Los Santos et Blaine County en haute résolution (jusqu'à 4K) et à 60 images par seconde.",
+        lien:        'https://store.steampowered.com/app/271590',             
     },
     {
         logo:        '../Images/Logos/CS2Logo.png',

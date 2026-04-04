@@ -1,11 +1,13 @@
 <?php
-session_start();
+    session_start();
 
-$_SESSION['valeur'] = $_POST["valeur"] ?? '';
-echo $_SESSION['valeur'];
+    // Récupération des données pour jeu.php
 
-header("Location: jeu.php");
+    $_SESSION['valeur'] = $_POST["valeur"] ?? '';
+    echo $_SESSION['valeur'];
 
-exit;
+    header("Location: jeu.php");
+
+    exit;
 
 ?>

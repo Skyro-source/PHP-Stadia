@@ -28,17 +28,17 @@
         
         <div class="container" id="jeu_principal">
             <div id="hero-info">
-                <img id="BF6logo" src="../Images/Logos/BF6Logo.png" alt="BF6logo">
-                <a href="https://store.steampowered.com/app/2807960/Battlefield_6/" id="lien-jouer">
+                <img id="BF6logo" src="../Images/Logos/GTAVLogo.png" alt="BF6logo">
+                <a href="https://store.steampowered.com/app/271590" id="lien-jouer">
                     <div id="bouton_jouer">
                         <img src="../Images/Bouton_Jouer.png" id="logo_jouer" alt="logo_jouer">
                         <p id="texte_jouer">Jouer</p>
                     </div>
                 </a>
-                <p id="descBF6">L'expérience de guerre totale ultime. Dans une guerre de chars, d'avions de chasse et d'arsenaux massifs, votre escouade est l'arme la plus redoutable.</p>
+                <p id="descBF6">Grand Theft Auto V sur PC offre aux joueurs la possibilité d'explorer le monde de Los Santos et Blaine County en haute résolution (jusqu'à 4K) et à 60 images par seconde.</p>
             </div>
             <div class="container" id="bannière">
-                <img class="slide-banner active" src="../Images/BannerHorizontal/BF6BannerHorizontal.jpg" alt="BF6banner">
+                <img class="slide-banner active" src="../Images/BannerHorizontal/GTAVBannerHorizontal.jpg" alt="BF6banner">
                 <img class="slide-banner" src="../Images/BannerHorizontal/CS2BannerHorizontal.jpg" alt="CS2banner">
                 <img class="slide-banner" src="../Images/BannerHorizontal/TF2BannerHorizontal.jpg" alt="TF2banner">
             </div>
