@@ -43,10 +43,10 @@
         $requete->bindParam('mdp', $mdp, PDO::PARAM_STR);   
         $requete->execute();
 
+        header("Location: connexion.php");
     }catch(PDOException $e){
         echo "perdu";
         die($e->getMessage());
-
     }
 
 ?>

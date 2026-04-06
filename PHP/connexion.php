@@ -11,7 +11,7 @@
     <link rel="icon" href="../Images/logo_txt_less.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Se connecter/S'inscire</title>
+    <title>Se connecter</title>
     <link rel="stylesheet" href="../CSS/style_connexion.css">
 </head>
 <body>

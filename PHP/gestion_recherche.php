@@ -4,14 +4,12 @@
     $q = $_GET['q'];
 
     try{
-        $sql = "SELECT id_jeu, nom FROM jeu WHERE nom LIKE :jeu ";
+        $sql = "SELECT id_jeu, nom FROM jeu WHERE nom LIKE :jeu "; // Utilisation de LIKE pour sortir des résulats même si le nom n'est pas exact
         $requete = $bdd->prepare($sql);
         $q = "%".$q."%";
         $requete->bindParam(":jeu", $q, PDO::PARAM_STR);
         $requete->execute();
         $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
-
-        $resultat = $resultat;
 
         echo json_encode($resultat);
     }

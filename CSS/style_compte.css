@@ -1,0 +1,93 @@
+*{
+    padding: 0px;
+    margin: 0px;    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(20, 20, 20, 1);
+}
+
+h1{
+    font-family: Arial Black;
+    color: whitesmoke;
+    background-color: transparent;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.bouton_a{
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    font-size: larger;
+    padding: 10px 15px;    
+    margin: 15px;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+
+.bouton_a:hover{
+    background-color: #BC1A4B;
+}
+
+#deco{
+    background-color: #ff4d4d;
+}
+    
+#deco:hover{
+    background-color: #ff0000;
+}
+
+#switch{
+    display: flex;
+    justify-content: center;
+}
+
+#compte{
+    background-color: #ff4c1d;
+}
+
+#jeux_recent:hover{
+    background-color: #ff4c1d;
+}
+
+#infos{
+    width: fit-content;
+    background-color: #1a1a1a;
+    margin: auto;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 20px;    
+}
+
+#infos_detail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_p{
+    margin: 20px;
+}
+

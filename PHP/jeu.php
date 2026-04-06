@@ -20,7 +20,7 @@
             <input type="text" id="recherche" placeholder="Rechercher..." onkeyup="showResult(this.value)">
             <div id="livesearch"></div>
         </div>
-            <?php if(isset($_SESSION["login"])): ?>
+            <?php if(isset($_SESSION["login"])): ?> <!-- Change les boutons en fonction de si l'utilisateur est connecté ou non -->
                 <div id=inscco>
                     <a href="compte.php" id="insc">Compte</a>
                     <a href="deconnexion.php" id="deco">Se déconnecter</a>

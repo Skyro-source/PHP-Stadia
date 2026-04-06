@@ -14,8 +14,13 @@
             echo "Erreur pour l'affichage";
             die($e->getMessage());
         }
+        
+        if (!isset($_SESSION["recent"])) {
+            $_SESSION["recent"] = array();
+        }
+        $_SESSION["recent"][] = $_SESSION["valeur"];
 
-        $page = $resultat['lien_steam'] ?? 'Lien Steam';
+        $page = $resultat['lien_steam'] ?? 'Lien Steam';   
 
         header("Location: $page");
 
