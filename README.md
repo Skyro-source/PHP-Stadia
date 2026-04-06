@@ -38,7 +38,7 @@ Si vous êtes sur Mac :
 
 ## <p align="center">***Explication des fonctionnalités***</p>
 
-## Page d'acceuil
+## ***Page d'acceuil***
 
 La première chose qu'on peut remarquer quand nous lancons le site est que contrairement à mes autres camarades qui ont fait des répliques de Netflix, j'ai personellement décidé de dévier des films et séries pour faire à la place des jeux vidéos, prenant le service Stadia qui à fermé il y'a quelques années. Pourquoi ? Principalement pour deux raisons : 
 
@@ -74,7 +74,7 @@ Quand au sections en dessous, c'est litérallement la même chose, mais nous met
 
 La seule exception à cela est le carrousel, dont les images dont les images sont chargés localement.
 
-## Page catalogue
+## ***Page catalogue***
 
 Cette page montre la librairie entière, filtré par genre. Mettre cela en place n'était pas difficile, juste éxecuter des requuêtes SQL pour chaque sections en leur indiquant quel genre prendre, et les mettre dans des '<div>' séparés, comme pour la page d'acceuil. D'ailleurs peu de travail à du être fait pour mettre cette page en place, car j'avait originellemtn pour projet de faire un grand catalogue comme ça pour la page d'acceuil, cependant vu que j'allais devoir faire cette page dans tout les cas, je me suis dit que ce serait un peu redondant.
 
@@ -83,7 +83,7 @@ Une autre chose que j'aurais bien aimé faire mais au final que je n'ai pas fait
     - Il n'y a pas assez de jeu dans la base pour justifier une telle chose
     - Je suis un idiot qui ne sait pas comment programmer et mes fonctions JS étaient remplies de bug dont j'avait un peu la flemme de régler
 
-## Page inscription
+## ***Page inscription***
 
 Pour qu'un utilisateur puisse s'inscrire, nous faisons plusieures choses :
 
@@ -92,7 +92,7 @@ Pour qu'un utilisateur puisse s'inscrire, nous faisons plusieures choses :
     - Nous faisons ensuite une requête SQL pour les insérer dans la BDD et nous faisons également des "bindParam()" pour éviter les injections SQL.
     - Dès que l'inscription est fini, nous envoyons l'utilisateur sur "connexion.php"
 
-## Page connexion
+## ***Page connexion***
 
 Lorsqu'un utilisateur rentre ses données dans le formulaire et l'envoie, nous effectuons les tâches suivantes : 
 
@@ -103,7 +103,7 @@ Lorsqu'un utilisateur rentre ses données dans le formulaire et l'envoie, nous e
         - Si oui, nous mettons l'email de l'utilisateur dans la fonction "$_SESSION["login"] et nous le renvoyons sur la page principale
         - Si non, nous envoyons un message d'erreur
 
-## Système de connexion
+## ***Système de connexion***
 
 Tant que nous sommes sur ce sujet là, autant aborder le système de connexion.
 Tout d'abord, sur toutes les pages du site, une session est créer (session_start();)
@@ -114,14 +114,14 @@ Dans le header des pages acceuil, catalogue et jeu, nous avons une fonction PHP 
 
 Si l'utilisateur est connecté, il ne peut pas se rendre sur la page de connexion et d'inscription.
 
-## Système de recherche
+## ***Système de recherche***
 
 Le site à un système de recherche si l'utilisateur souhaite rechercher un jeu particulier.
 Ce système utilise du AJAX et du XML.
 Nous avons un input html qui récupère les données de l'utilisateur, au bout de 3 caractères, nous récupérons le résultat de cet input grâce au fichier "recherche.js" et nous le mettons un dans un fichier XML que nous envoyons à "gestion_recherche.php". Dans ce dossier, nous récupérons ces données et nous les mettons dans la variable "$q". Nous faisons ensuite une requête SQL pour récupérer le nom du jeu ainsi que son ID en utilisant "LIKE" au lieu d'un "=" pour obtenir des résultats même si le nom tapé n'est pas exact.
 Le résultat est ensuite renvoyé à "recherche.js" et nous affichons les résultats.
 
-## Gestion jeu spécifique
+## ***Gestion jeu spécifique***
 
 Que ce soit lorsqu'on clique sur un jeu sur la page principale, dans le catalogue ou bien sur la barre de recherche, nous gardons un "input" invisible juste à côté du jeu pour savoir lequel l'utilisateur à cliquer. Le site passe d'abord dans "recup_donnees.php" ou il récupère la valeur de l'input et le met dans $_SESSION["valeur"] pour qu'on puisse facilement le passer d'une page à l'autre.
 
@@ -129,18 +129,18 @@ Il est ensuite envoyé sur la page "jeu.php", ici, nous récupérons une tonne d
 
 Dès que l'utilisateur clique sur le bouton "Jouer", nous vérifions d'abord si il est connecté et le renvoyons sur la page de connexion si ce n'est pas le cas, récupérons le lien du jeu sur lequel il a cliqué avec une requête SQL, mettons ce lien dans la variable "$page" puis nous utilisons un "header()" pour le renvoyer sur cette page.
 
-## Gestion compte
+## ***Gestion compte***
 
 La page "compte.php" permet d'afficher les informations du compte d'un utilisateur. Nous avons déjà l'email de l'utilisateur, donc le récupérer après n'est pas un problème, nous prenons juste les infos nécessaires avec une requête SQL en indiquant quel utilisateur prendre avec un "WHERE" et nous les affichons sur le site.
 
-## Déconnexion
+## ***Déconnexion***
 
 Peut importe la page sur laquelle l'utilisateur est, deux choses sont effectués :
 
     - La session est complètement détruite
     - L'utilisateur est renvoyé sur la page principale
 
-## Fonctionnalité bonus
+## ***Fonctionnalité bonus***
 
 Ce site possède juste une des fonctionnalités bonus qui nous a été conseillé de faire (même si elle n'est pas vraiment bien coder mais bon).
 Lorsqu'un utilisateur clique sur le bouton "Jouer" dans la page "jeu.php" en plus de le rediriger vers la page Steam du jeu, nous récupérons également l'ID du jeu et nous le mettons dans l'array $_SESSIONS["récent"].
