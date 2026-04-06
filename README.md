@@ -3,6 +3,7 @@
 ## ***Instructions pour mettre en place le site***
 
 Si vous êtes sur Linux :
+
     - Installez apache2
     - Mettez tout les dossiers dans /var/html/www/
     - Installez Mysql
@@ -35,7 +36,7 @@ Si vous êtes sur Mac :
     - Frère débrouille toi
      
 
-## ***Explication des fonctionnalités***
+## <p align="center">***Explication des fonctionnalités***</p>
 
 ## Page d'acceuil
 
