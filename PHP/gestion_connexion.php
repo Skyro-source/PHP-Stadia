@@ -13,15 +13,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
         // Cherche l'utilisateur dans la BDD
 
-        $requete = $bdd->prepare("SELECT * FROM utilisateurs WHERE email = ?");
+        $requete = $bdd->prepare("SELECT idUtilisateur, email, mot_de_passe FROM utilisateurs WHERE email = ?");
         $requete->execute([$mail]);
         $utilisateur = $requete->fetch();
 
         // Vérification du mot de passe
 
         if ($mail && password_verify($_POST["mdp"], $utilisateur["mot_de_passe"])){
-            $_SESSION["login"] = $utilisateur["email"];
-            header("Location: acceuil.php");
+            $_SESSION["login"] = $utilisateur["idUtilisateur"];
+            print_r($_SESSION["login"]);
+            //header("Location: acceuil.php");
         }
         else{
             echo "Veuillez remplir tout les champs";

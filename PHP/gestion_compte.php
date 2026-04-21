@@ -4,9 +4,9 @@
     include_once "bdd.php";
 
     try{
-        $sql = "SELECT idUtilisateur, nom, prenom, date_de_naissance, pseudonyme, telephone, email FROM utilisateurs WHERE email = :mail;";
+        $sql = "SELECT idUtilisateur, nom, prenom, date_de_naissance, pseudonyme, telephone, email FROM utilisateurs WHERE idUtilisateur = :id;";
         $requete = $bdd->prepare($sql);
-        $requete->bindParam('mail', $_SESSION['login'], PDO::PARAM_STR);
+        $requete->bindParam('id', $_SESSION['login'], PDO::PARAM_INT);
         $requete->execute();
         $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
     }catch(PDOException $e){
