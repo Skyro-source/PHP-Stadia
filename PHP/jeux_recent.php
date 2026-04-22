@@ -28,7 +28,7 @@
     <div id="recent">
         <h1>Jeux récents</h1>
         <div id="recent_detail">
-            <?php foreach (array_slice($resultat, 0, 10) as $row): ?>
+            <?php foreach (array_slice($resultat, 0, 14) as $row): ?>
                 <form method="POST" action="recup_donnees.php">
                     <button type="submit">
                         <img src="<?= htmlspecialchars($row["image"]) ?>" class="img_horizontale">

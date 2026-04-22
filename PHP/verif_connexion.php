@@ -3,8 +3,6 @@
     session_start();
     include_once "bdd.php";
 
-    $recent[] = $_SESSION["valeur"];
-
     if(isset($_SESSION["login"])){
         try{
             $sqlLien = "SELECT lien_steam FROM carrousel WHERE id_jeu = :idJeu;";
@@ -30,20 +28,40 @@
         }
 
         if (empty($resultatRecent)) {
-            $sqlNouveau = "INSERT INTO preferences (fkUtilisateur, recent, favori)
-            VALUES (:idUtilisateur, :recent, 0)";
-            $requete = $bdd->prepare($sqlNouveau);
-            $requete->bindParam(':idUtilisateur', $_SESSION['login'], PDO::PARAM_INT);
-            $requete->bindParam(':recent', $recent, PDO::PARAM_INT);
-            $requete->execute();
+
+            try{
+                $sqlInsert = "INSERT INTO preferences (fkUtilisateur, recent, favori)
+                VALUES (:idUtilisateur, :recent, 0)";
+                $requete = $bdd->prepare($sqlInsert);
+                $requete->bindParam(':idUtilisateur', $_SESSION['login'], PDO::PARAM_INT);
+                $requete->bindParam(':recent', $_SESSION['valeur'], PDO::PARAM_INT);
+                $requete->execute();
+            }catch(PDOException $e){
+                echo "Erreur pour l'enregistrement du jeu récent";
+                die($e->getMessage());
+            }
+
         }
         else{
-            
+
+            array_unshift($resultatRecent, $_SESSION['valeur']);
+            $recent = implode(", ", $resultatRecent);
+
+            try{
+                $sqlUpdate = "UPDATE preferences SET recent = :recent WHERE fkUtilisateur = :idUtilisateur;";
+                $requete = $bdd->prepare($sqlUpdate);
+                $requete->bindParam(':idUtilisateur', $_SESSION['login'], PDO::PARAM_INT);
+                $requete->bindParam(':recent', $recent, PDO::PARAM_STR);
+                $requete->execute();
+            }catch(PDOException $e){
+                echo "Erreur pour l'enregistrement du jeu récent";
+                die($e->getMessage());
+            }
         }
 
-        //$page = $resultat['lien_steam'] ?? 'Lien Steam';   
+        $page = $resultatLien['lien_steam'] ?? 'Lien Steam';   
 
-        //header("Location: $page");
+        header("Location: $page");
 
     }
     else{
