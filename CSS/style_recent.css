@@ -90,6 +90,18 @@ header{
     align-items: center;
 }
 
+#null{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+#p_null{
+    padding-top: 30px;
+    font-size: larger;
+}
+
 form, button {
     display: contents;
 }

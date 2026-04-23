@@ -28,14 +28,21 @@
     <div id="recent">
         <h1>Jeux récents</h1>
         <div id="recent_detail">
-            <?php foreach (array_slice($resultat, 0, 14) as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img src="<?= htmlspecialchars($row["image"]) ?>" class="img_horizontale">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
-            <?php endforeach ?>
+            <?php if($booleanRecent == 1): ?>
+                <div id="null">
+                    <h1>Vous n'avez joué à aucun jeu.</h1>
+                    <p id="p_null">Allez jouer à un jeu pour le voir apparaître ici.</p>
+                </div>
+            <?php else: ?>
+                <?php foreach (array_slice($affichage, 0, 14) as $row): ?>
+                    <form method="POST" action="recup_donnees.php">
+                        <button type="submit">
+                            <img src="<?= htmlspecialchars($row["image"]) ?>" class="img_horizontale">
+                            <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
+                        </button>
+                    </form>
+                <?php endforeach ?>
+            <?php endif ?>
         </div>
     </div>
 </body>

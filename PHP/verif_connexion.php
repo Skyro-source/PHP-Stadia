@@ -3,8 +3,14 @@
     session_start();
     include_once "bdd.php";
 
+    // Check si l'utilisateur est connecté, le renvoie sur la page de co si ce n'est pas le cas
+
     if(isset($_SESSION["login"])){
+
+        // Récupère le lien Steam du jeu
+
         try{
+            
             $sqlLien = "SELECT lien_steam FROM carrousel WHERE id_jeu = :idJeu;";
             $requete = $bdd->prepare($sqlLien);
             $requete->bindParam('idJeu', $_SESSION['valeur'], PDO::PARAM_INT);
@@ -14,6 +20,11 @@
             echo "Erreur pour la redirection";
             die($e->getMessage());
         }
+
+        $page = $resultatLien['lien_steam'] ?? 'Lien Steam';  
+        
+        // Gestion des jeux récents
+        // Récupère les jeux récents de la BDD
 
         try{
             $sqlRecent = "SELECT recent FROM preferences WHERE fkUtilisateur = :idUtilisateur;";
@@ -26,6 +37,8 @@
             echo "Erreur pour l'enregistrement du jeu récent";
             die($e->getMessage());
         }
+
+        // Si c'est vide, on insère le nouveau jeu, sinon, on l'ajoute à ceux déjà existant
 
         if (empty($resultatRecent)) {
 
@@ -44,8 +57,18 @@
         }
         else{
 
-            array_unshift($resultatRecent, $_SESSION['valeur']);
-            $recent = implode(", ", $resultatRecent);
+            $listeRecent = !empty($resultatRecent['recent']) 
+                ? array_map('intval', explode(", ", $resultatRecent['recent'])) 
+                : [];
+ 
+            if (in_array((int)$_SESSION['valeur'], $listeRecent)){
+                header("Location: $page");
+                $recent = $resultatRecent['recent'];
+            }
+            else{
+                array_unshift($listeRecent, (int)$_SESSION['valeur']);
+                $recent = implode(", ", $listeRecent);
+            }
 
             try{
                 $sqlUpdate = "UPDATE preferences SET recent = :recent WHERE fkUtilisateur = :idUtilisateur;";
@@ -58,8 +81,6 @@
                 die($e->getMessage());
             }
         }
-
-        $page = $resultatLien['lien_steam'] ?? 'Lien Steam';   
 
         header("Location: $page");
 
