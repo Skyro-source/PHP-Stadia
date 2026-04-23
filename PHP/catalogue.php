@@ -41,12 +41,9 @@
         <h1>Action</h1>
         <div class="container" id="bannièreAction">
             <?php foreach (array_slice($resultatAction, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -57,11 +54,9 @@
         <h1>Aventure</h1>
         <div class="container" id="bannièreAventure">
             <?php foreach (array_slice($resultatAventure, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
                 </form>
             <?php endforeach; ?>
         </div>
@@ -73,12 +68,9 @@
         <h1>RPG</h1>
         <div class="container" id="bannièreRPG">
             <?php foreach (array_slice($resultatRPG, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -89,12 +81,9 @@
         <h1>FPS</h1>
         <div class="container" id="bannièreFPS">
             <?php foreach (array_slice($resultatFPS, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -105,12 +94,9 @@
         <h1>Simulation</h1>
         <div class="container" id="bannièreSim">
             <?php foreach (array_slice($resultatSim, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -121,12 +107,9 @@
         <h1>Stratégie</h1>
         <div class="container" id="bannièreStrat">
             <?php foreach (array_slice($resultatStrat, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -137,12 +120,9 @@
         <h1>Sport</h1>
         <div class="container" id="bannièreSport">
             <?php foreach (array_slice($resultatSport, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -153,12 +133,9 @@
         <h1>Course</h1>
         <div class="container" id="bannièreCourse">
             <?php foreach (array_slice($resultatCourse, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -169,12 +146,9 @@
         <h1>Survie</h1>
         <div class="container" id="bannièreSurvie">
             <?php foreach (array_slice($resultatSurvie, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -185,12 +159,9 @@
         <h1>Horreur</h1>
         <div class="container" id="bannièreHorreur">
             <?php foreach (array_slice($resultatHorreur, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -201,12 +172,9 @@
         <h1>Plateforme</h1>
         <div class="container" id="bannièrePlateforme">
             <?php foreach (array_slice($resultatPlateforme, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -217,12 +185,9 @@
         <h1>Indépendant</h1>
         <div class="container" id="bannièreInde">
             <?php foreach (array_slice($resultatInde, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -233,12 +198,9 @@
         <h1>MMO</h1>
         <div class="container" id="bannièreMMO">
             <?php foreach (array_slice($resultatMMO, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>
@@ -249,12 +211,9 @@
         <h1>Battle Royale</h1>
         <div class="container" id="bannièreBR">
             <?php foreach (array_slice($resultatBR, 0, 20)as $row): ?>
-                <form method="POST" action="recup_donnees.php">
-                    <button type="submit">
-                        <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">
-                        <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                    </button>
-                </form>
+                <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                    <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                </a>
             <?php endforeach; ?>
         </div>    
     </div>

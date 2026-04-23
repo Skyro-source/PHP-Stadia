@@ -3,6 +3,9 @@
     session_start();
     include_once "bdd.php";
 
+    // Récupération et validation de l'ID
+    $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
     try{
         $sql = "SELECT carrousel.*, jeu.nom, jeu.image, jeu.note, jeu.date_de_sortie, genre.libelle, developpeur.nom AS developpeur_nom, editeur.nom AS editeur_nom FROM carrousel\n"
 
@@ -20,7 +23,7 @@
 
         . "WHERE carrousel.id_jeu = :id;";
         $requete = $bdd->prepare($sql);
-        $requete->bindParam('id', $_SESSION['valeur'], PDO::PARAM_INT);
+        $requete->bindParam('id', $id, PDO::PARAM_INT);
         $requete->execute();
         $resultat = $requete->fetchAll(PDO::FETCH_ASSOC); // Récupère le résultat
         }

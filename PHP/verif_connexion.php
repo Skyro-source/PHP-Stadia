@@ -2,6 +2,7 @@
 
     session_start();
     include_once "bdd.php";
+    $_SESSION['valeur'] = $_POST["valeur"] ?? '';
 
     // Check si l'utilisateur est connecté, le renvoie sur la page de co si ce n'est pas le cas
 
@@ -57,10 +58,14 @@
         }
         else{
 
+            // Transforme le String stocké en base en liste à nouveau
+
             $listeRecent = !empty($resultatRecent['recent']) 
                 ? array_map('intval', explode(", ", $resultatRecent['recent'])) 
                 : [];
  
+            // Check si le jeu n'est pas déjà dans le tableau
+
             if (in_array((int)$_SESSION['valeur'], $listeRecent)){
                 header("Location: $page");
                 $recent = $resultatRecent['recent'];

@@ -37,11 +37,15 @@
         <div class="container" id="jeu_principal">
             <div id="hero-info">
                 <img id="BF6logo" src="<?= htmlspecialchars($row['logo']) ?>" alt="logo">
-                <a href="verif_connexion.php" id="lien-jouer">
-                    <div id="bouton_jouer">
-                        <img src="../Images/Bouton_Jouer.png" id="logo_jouer" alt="logo_jouer">
-                        <p id="texte_jouer">Jouer</p>
-                    </div>
+                <form method="POST" action="verif_connexion.php">
+                    <button type="submit" id="lien-jouer">  
+                        <div id="bouton_jouer">
+                            <img src="../Images/Bouton_Jouer.png" id="logo_jouer" alt="logo_jouer">
+                            <p id="texte_jouer">Jouer</p>
+                            <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
+                        </div>
+                    </button>
+                </form>
                 </a>
             </div>
             <div class="container" id="bannière">

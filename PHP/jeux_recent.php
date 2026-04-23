@@ -35,12 +35,9 @@
                 </div>
             <?php else: ?>
                 <?php foreach (array_slice($affichage, 0, 14) as $row): ?>
-                    <form method="POST" action="recup_donnees.php">
-                        <button type="submit">
-                            <img src="<?= htmlspecialchars($row["image"]) ?>" class="img_horizontale">
-                            <input type="hidden" value="<?= htmlspecialchars($row['id_jeu'])?>" name="valeur">
-                        </button>
-                    </form>
+                    <a href="jeu.php?id=<?= $row['id_jeu'] ?>">
+                        <img class="img_horizontale" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
+                    </a>
                 <?php endforeach ?>
             <?php endif ?>
         </div>
