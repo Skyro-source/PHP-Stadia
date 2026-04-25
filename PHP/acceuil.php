@@ -1,7 +1,8 @@
 <?php
     session_start();
+    unset($_SESSION["erreur"]);
     include "gestion_jeux.php";    
-?>
+?>  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,26 +36,31 @@
         </div>
         
         <div class="container" id="jeu_principal">
-            <div id="hero-info">
-                <img id="BF6logo" src="../Images/Logos/GTAVLogo.png" alt="BF6logo">
-                <a href="https://store.steampowered.com/app/271590" id="lien-jouer">
-                    <div id="bouton_jouer">
-                        <img src="../Images/Bouton_Jouer.png" id="logo_jouer" alt="logo_jouer">
-                        <p id="texte_jouer">Jouer</p>
-                    </div>
-                </a>
-                <p id="descBF6">Grand Theft Auto V sur PC offre aux joueurs la possibilité d'explorer le monde de Los Santos et Blaine County en haute résolution (jusqu'à 4K) et à 60 images par seconde.</p>
-            </div>
-            <div class="container" id="bannière">
-                <img class="slide-banner active" src="../Images/BannerHorizontal/GTAVBannerHorizontal.jpg" alt="BF6banner">
-                <img class="slide-banner" src="../Images/BannerHorizontal/CS2BannerHorizontal.jpg" alt="CS2banner">
-                <img class="slide-banner" src="../Images/BannerHorizontal/TF2BannerHorizontal.jpg" alt="TF2banner">
+            <div id="jeu_elements">
+                <div id="hero-info">
+                    <img id="BF6logo" src="" alt="BF6logo">
+                    <form method="POST" action="verif_connexion.php">
+                        <button type="submit" id="lien-jouer">  
+                            <div id="bouton_jouer">
+                                <img src="../Images/Bouton_Jouer.png" id="logo_jouer" alt="logo_jouer">
+                                <p id="texte_jouer">Jouer</p>
+                                <input type="hidden" value="" name="valeur" id="valeur">
+                            </div>
+                        </button>
+                    </form>
+                    <p id="descBF6"></p>
+                </div>
+                <div class="container" id="bannière">
+                    <img id="slide-banner" src="" alt="banner">
+                </div>
             </div>
             <!-- Navigation par points pour le slideshow héro -->
             <div id="hero-buttons">
-                <button class="point active" onclick="changerImageManuellement(0)"></button>
-                <button class="point" onclick="changerImageManuellement(1)"></button>
-                <button class="point" onclick="changerImageManuellement(2)"></button>
+                <button class="point active" onclick="changementManuel(0)"></button>
+                <button class="point" onclick="changementManuel(1)"></button>
+                <button class="point" onclick="changementManuel(2)"></button>
+                <button class="point" onclick="changementManuel(3)"></button>
+                <button class="point" onclick="changementManuel(4)"></button>
             </div>
         </div>
 
@@ -92,11 +98,12 @@
         </div>
 
     </div>
-    <script src="../JS/carrousel.js"></script>
+    
     <footer>
         <a href="catalogue.php" id="catalogue">Afficher tout les jeux</a>
     </footer>
 
+    <script src="../JS/carrousel.js"></script>
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
     <script src="../JS/recherche.js"></script>
 </body>

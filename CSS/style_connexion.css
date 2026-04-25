@@ -53,15 +53,28 @@ a{
 
 main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 40px 20px;
     box-sizing: border-box;
 }
 
 .main-child{
     flex: 1;
+}
+
+#erreur{
+    background-color: #ff1010;
+    padding: 20px;
+    border-radius: 15px;
+    border-color: whitesmoke;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#erreur strong{
+    background-color: #ff1010   ;
 }
 
 #co{
@@ -71,8 +84,11 @@ main{
     justify-content: center;
     flex: 2;
     background-color: #1a1a1a;
-    padding: 40px 30px;
+    padding: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
     border-radius: 20px;
+    margin: 50px;
 }
 
 #txtCo{

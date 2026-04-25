@@ -1,5 +1,6 @@
 <?php
     include_once "gestion_compte.php";
+    unset($_SESSION["erreur"]);
     if(!isset ($_SESSION["login"])){
         header("Location: acceuil.php");
     }

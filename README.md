@@ -72,7 +72,7 @@ Nous utilisons la fonction *foreach* afin de ne pas avoir à repêter les mêmes
 
 Quand au sections en dessous, c'est litérallement la même chose, mais nous mettons la restriction "WHERE fkGenre = 1" pour prendre seulement des jeux d'un genre spécifique.
 
-La seule exception à cela est le carrousel, dont les images dont les images sont chargés localement.
+Pour le carrousel, la méthode est identique, mais vu que nous devons avoir les images dans le document Javascript, nous passons ces données du fichier PHP au fichier JS avec du JSON.
 
 ## ***Page catalogue***
 

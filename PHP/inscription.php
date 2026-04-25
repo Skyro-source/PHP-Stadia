@@ -1,5 +1,6 @@
 <?php
     session_start();
+    unset($_SESSION["erreur"]);
     if(isset ($_SESSION["login"])){
         header("Location: acceuil.php");
     }

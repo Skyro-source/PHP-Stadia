@@ -21,6 +21,11 @@
     </header>
 
     <main>
+
+        <?php if(isset ($_SESSION["erreur"])): ?>
+            <?= $_SESSION["erreur"]?>    
+        <?php endif; ?>
+
         <div class="main-child"></div>
         <div class="main-child" id="co">
             <p id="txtCo">Connexion<p>

@@ -1,5 +1,8 @@
 <?php
+    session_start();
+    unset($_SESSION["erreur"]);
     include_once "gestion_jeu_spec.php";
+    
 ?>
 
 <!DOCTYPE html>

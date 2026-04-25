@@ -1,6 +1,5 @@
 <?php
 
-    session_start();
     include_once "bdd.php";
 
     // Récupération et validation de l'ID

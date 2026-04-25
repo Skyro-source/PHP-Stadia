@@ -160,15 +160,6 @@ p{
     left: 0;
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
-
-.slide-banner:first-child {
-    position: relative;
-}
-
-.slide-banner.active {
-    opacity: 1;
 }
 
 #hero-info {
@@ -192,7 +183,9 @@ p{
 #BF6logo {
     background-color: transparent;
     width: clamp(150px, 75%, 380px);
+    max-width: 100%;
     height: auto;
+    overflow: hidden;
 }
 
 /* Description */
@@ -259,7 +252,7 @@ p{
     border: 2px solid whitesmoke;
     background-color: transparent;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.5s, transform 0.2s;
     padding: 0;
 }
 

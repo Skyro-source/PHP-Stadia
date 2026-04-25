@@ -91,6 +91,7 @@
 
     }
     else{
+        $_SESSION["erreur"] = "<p align='center' id='erreur'><strong>Erreur : </strong><br>Vous devez être connecté pour accéder à ce contenu.</p>";
         header("Location: connexion.php");
     }
     
