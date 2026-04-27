@@ -1,8 +1,25 @@
 <?php
+
     session_start();
-    unset($_SESSION["erreur"]);
+
+    // Lignes pour se débarasser des lignes "Undefined Array Key
+
+    if(!isset ($_SESSION["erreur"])){
+        $_SESSION["erreur"] = "NULL";
+    }
+
+    $mail = "NULL";
+
+    // Vérifie si l'utilisateur est connecté
+
     if(isset ($_SESSION["login"])){
         header("Location: acceuil.php");
+    }
+    
+    // Code pour ne pas afficher une erreur qu'il n'est pas sensé avoir sur cette page
+
+    if($_SESSION["erreur"] !== "<p align='center' id='erreur'><strong>Erreur : </strong><br>$mail n'est pas une adresse valide.</p>"){
+        unset($_SESSION["erreur"]);
     }
 ?>
 
@@ -22,6 +39,14 @@
     </header>
 
     <main>
+
+        <!-- Messages d'erreur -->
+
+        <?php 
+            if(isset ($_SESSION["erreur"])): ?>
+                <?= $_SESSION["erreur"]?>       
+        <?php endif; ?>
+
         <div class="main-child"></div>
         <div class="main-child" id="Insc">
             <div id="CoInsc">
