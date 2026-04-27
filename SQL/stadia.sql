@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.1deb1+deb12u1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : sam. 04 avr. 2026 à 16:46
--- Version du serveur : 10.4.32-MariaDB
--- Version de PHP : 8.2.12
+-- Hôte : localhost:3306
+-- Généré le : lun. 27 avr. 2026 à 12:55
+-- Version du serveur : 10.11.14-MariaDB-0+deb12u2
+-- Version de PHP : 8.2.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -617,6 +617,26 @@ INSERT INTO `jeu` (`id_jeu`, `nom`, `date_de_sortie`, `note`, `lien`, `image`, `
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `preferences`
+--
+
+CREATE TABLE `preferences` (
+  `fkUtilisateur` int(11) NOT NULL,
+  `recent` varchar(1000) NOT NULL,
+  `favori` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `preferences`
+--
+
+INSERT INTO `preferences` (`fkUtilisateur`, `recent`, `favori`) VALUES
+(9, '10, 44, 75, 8, 80, 68, 69, 70, 77, 74, 78, 53, 5, 87, 76, 30', '0'),
+(10, '11, 94', '0');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `utilisateurs`
 --
 
@@ -640,7 +660,8 @@ INSERT INTO `utilisateurs` (`idUtilisateur`, `nom`, `prenom`, `date_de_naissance
 (3, 'Dupont', 'Marie', '1995-10-17', 'MarieD95', '0612345678', 'mmarie.dupont@example.com', 'mdp123'),
 (4, 'Laurent', 'Lili', '1997-12-12', 'MarieD95', '0787654321', 'lucas.martin@test.fr', '$2y$10$pytsbTKfmdFC9eT6E96PFuQULIU.XF5P/35bWdt1CjKQ82Ik4tJY6'),
 (5, 'Bernard', 'Sophie', '1998-12-03', 'Soso88', '0655443322', 'sophie.bernard@mail.com', '$2y$10$QWztbAdpiKDnht.x4eSTnecu7akmsM535Xz9VDAQOf/fCN7DQTQtC'),
-(9, 'sbr', 'sbr', '2006-10-26', 'sbr', '0629835716', 'sbr@gmail.com', '$2y$10$uLiLoPZ6O0IrMLI5pHaxXuPmqgX7J8hmmF.ltyEgWLcXN3xhr8pWe');
+(9, 'sbr', 'sbr', '2006-10-26', 'sbr', '0629835716', 'sbr@gmail.com', '$2y$10$uLiLoPZ6O0IrMLI5pHaxXuPmqgX7J8hmmF.ltyEgWLcXN3xhr8pWe'),
+(10, 'test', 'test', '2026-04-22', 'test', '0695687396', 'test@test.test', '$2y$10$.IFpTs/BlmoFHjQ2ki7ZteDcBkTLgxvluT9gVndAR/zUcDcJQWjPy');
 
 -- --------------------------------------------------------
 
@@ -720,6 +741,12 @@ ALTER TABLE `jeu`
   ADD KEY `fk_jeu_genre` (`fkGenre`);
 
 --
+-- Index pour la table `preferences`
+--
+ALTER TABLE `preferences`
+  ADD PRIMARY KEY (`fkUtilisateur`);
+
+--
 -- Index pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
@@ -734,7 +761,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Contraintes pour les tables déchargées
