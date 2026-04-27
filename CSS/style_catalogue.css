@@ -188,3 +188,103 @@ button{
     transform: scale(1.10);
 }
 
+/* ── RESPONSIVE TABLETTE (768px – 1024px) ── */
+@media (max-width: 1024px) {
+    #hero-info {
+        bottom: 5%;
+        width: clamp(160px, 50%, 420px);
+    }
+
+    #BF6logo {
+        width: clamp(120px, 28%, 280px);
+    }
+
+    #descBF6 {
+        font-size: clamp(0.75rem, 1.4vw, 1rem);
+    }
+
+    .imgBannière { width: clamp(85px, 13vw, 155px); }
+}
+
+/* ── RESPONSIVE MOBILE (< 768px) ── */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 10px;
+        padding: 14px 12px;
+    }
+
+    #logo { width: clamp(120px, 40vw, 180px); }
+
+    #search-wrapper {
+        width: 100%;
+    }
+
+    #recherche {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: medium;
+    }
+
+    #inscco {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #insc, #deco {
+        justify-content: center;
+        font-size: large;
+        padding: 12px 10px;
+        border-radius: 12px;
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Sur mobile on empile sous la bannière */
+    #jeu_principal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #bannière { order: 1; }
+
+    #hero-info {
+        position: static;
+        order: 2;
+        width: 100%;
+        padding: 12px 15px 16px;
+        box-sizing: border-box;
+        align-items: center;
+        background-color: rgba(20,20,20,0.9);
+    }
+
+    #BF6logo {
+        width: clamp(120px, 55vw, 220px);
+    }
+
+    #descBF6 {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    #hero-buttons {
+        position: static;
+        transform: none;
+        order: 3;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    #bouton_jouer { width: 130px; }
+
+    #jeuPlus, #FPS, #platformer {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .imgBannière { width: clamp(80px, 40vw, 150px); }
+}

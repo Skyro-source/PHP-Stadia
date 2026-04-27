@@ -50,7 +50,7 @@
     
             header("Location: connexion.php");
         }catch(PDOException $e){
-            echo "perdu";
+            echo "Erreur.";
             die($e->getMessage());
         }
 

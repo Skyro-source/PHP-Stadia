@@ -61,3 +61,6 @@ function changementAutomatique(){
     }
     changerImage(indexActuel);
 }
+
+banniere.addEventListener('mouseenter', () => clearInterval(intervalle));
+banniere.addEventListener('mouseleave', () => intervalle = setInterval(changementAutomatique, 15000));

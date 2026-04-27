@@ -70,7 +70,7 @@
 // Section Simulation
 
     try{
-        $sqlSim = "SELECT id_jeu, image, lien FROM jeu WHERE fkGenre = 5 ORDER BY nom ASC";
+        $sqlSim = "SELECT id_jeu, image, lien FROM jeu WHERE fkGenre = 5 ORDER BY nom ASC LIMIT 20";
         $requete = $bdd->prepare($sqlSim);
         $requete->execute();
         $resultatSim = $requete->fetchAll(PDO::FETCH_ASSOC);

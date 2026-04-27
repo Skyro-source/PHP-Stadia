@@ -99,7 +99,7 @@
                     <img class="imgBannière" src="<?= htmlspecialchars($row['image']) ?>" alt="Image du jeu">   
                 </a>
             <?php endforeach; ?>
-        </div>    
+        </div> 
     </div>
 
 <!-- Jeux Stratégie -->
