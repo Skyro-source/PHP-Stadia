@@ -49,7 +49,6 @@
                         </div>
                     </button>
                 </form>
-                </a>
             </div>
             <div class="container" id="bannière">
                 <img class="slide-banner active" src="<?= htmlspecialchars($row['image_horizontale']) ?>" alt="BF6banner">                

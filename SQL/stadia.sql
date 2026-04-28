@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : lun. 27 avr. 2026 à 12:55
+-- Généré le : mar. 28 avr. 2026 à 14:46
 -- Version du serveur : 10.11.14-MariaDB-0+deb12u2
 -- Version de PHP : 8.2.29
 
@@ -140,7 +140,14 @@ INSERT INTO `carrousel` (`id_jeu`, `image_horizontale`, `logo`, `lien_steam`, `l
 (97, '../Images/BannerHorizontal/HollowKnightBannerHorizontal.jpg', '../Images/Logos/HollowKnightLogo.png', 'https://store.steampowered.com/app/367520', 'https://www.youtube.com/embed/UAO2urG23S4?si=Ewla3tChTjFfxG9p', 'Choisissez votre destin dans Hollow Knight ! Une aventure épique et pleine d’action, qui vous plongera dans un vaste royaume en ruine peuplé d’insectes et de héros. Dans un monde en 2D classique, dessiné à la main.'),
 (98, '../Images/BannerHorizontal/Ori1BannerHorizontal.jpg', '../Images/Logos/Ori1Logo.png', 'https://store.steampowered.com/app/387290', 'https://www.youtube.com/embed/cklw-Yu3moE?si=1GxlUtsbpt25WvJV', '\"Ori and the Blind Forest\" relate l\'histoire d\'une jeune créature orpheline à la destinée héroïque, au travers d\'un jeu de plateforme et d\'action aux graphismes époustouflants, développé par Moon Studios.'),
 (99, '../Images/BannerHorizontal/Ori2BannerHorizontal.jpg', '../Images/Logos/Ori2Logo.png', 'https://store.steampowered.com/app/1057090', 'https://www.youtube.com/embed/kd0zbNw1VOg?si=GXZIsMAgq9sDQjmk', 'Embarquez pour une nouvelle aventure dans un monde vaste et dépaysant où vous rencontrerez des ennemis gigantesques et des énigmes ardues dans votre quête pour révéler la destinée d\'Ori.'),
-(100, '../Images/BannerHorizontal/CelesteBannerHorizontal.jpg', '../Images/Logos/CelesteLogo.png', 'https://store.steampowered.com/app/504230', 'https://www.youtube.com/embed/FqBj2IGg6Uw?si=KVFd8KcEx4E2wcJY', 'Aidez Madeline à survivre à ses démons intérieurs au mont Celeste, dans ce jeu de plateformes ultra relevé, réalisé par les créateurs du classique TowerFall. Relevez des centaines de défis faits à la main, découvrez tous les secrets et dévoilez le mystère de la montagne.');
+(100, '../Images/BannerHorizontal/CelesteBannerHorizontal.jpg', '../Images/Logos/CelesteLogo.png', 'https://store.steampowered.com/app/504230', 'https://www.youtube.com/embed/FqBj2IGg6Uw?si=KVFd8KcEx4E2wcJY', 'Aidez Madeline à survivre à ses démons intérieurs au mont Celeste, dans ce jeu de plateformes ultra relevé, réalisé par les créateurs du classique TowerFall. Relevez des centaines de défis faits à la main, découvrez tous les secrets et dévoilez le mystère de la montagne.'),
+(101, '../Images/BannerHorizontal/SARTBannerHorizontal.jpg', '../Images/Logos/SARTLogo.png', 'https://store.steampowered.com/app/212480', 'https://www.youtube.com/embed/7CU3CDOK2Ag?si=6BZvLlms2HwGwiOt', 'Affrontez-vous sur terre, sur mer et dans les airs grâce aux incroyables véhicules transformables en voitures, bateaux ou avions en pleine course. '),
+(102, '../Images/BannerHorizontal/NFSHeatBannerHorizontal.jpg', '../Images/Logos/NFSHeatLogo.png', 'https://store.steampowered.com/app/1222680', 'https://www.youtube.com/embed/9ewiJJe_nYI?si=JJzvHvWp1bnKm4Yn', 'Pilotez le jour et risquez tout la nuit dans Need for Speed™ Heat, un jeu palpitant de courses urbaines où les limites de la légalité s\'estompent dès que le soleil se couche. '),
+(103, '../Images/BannerHorizontal/TheCrewMotorfestBannerHorizontal.jpg', '../Images/Logos/TheCrewMotorfestLogo.png', 'https://store.steampowered.com/app/2698940', 'https://www.youtube.com/embed/kpVfIqxsE24?si=iCBWlHP2witvAu6y', 'The Crew Motorfest est un jeu de course en ligne en monde ouvert qui se déroule sur l\'île d\'O\'ahu, à Hawaï. Découvrez le meilleur de la culture automobile en participant à des courses intenses, en prenant part à des épreuves thématiques et en collectionnant des centaines de voitures. '),
+(104, '../Images/BannerHorizontal/NFSHotPursuitBannerHorizontal.jpg', '../Images/Logos/NFSHotPursuitLogo.png', 'https://store.steampowered.com/app/1328660', 'https://www.youtube.com/embed/HLiY6wwfGX4?si=6kJPLGx_VFSAfnYR', 'Ressentez le frisson de la poursuite et l\'adrénaline de l\'évasion au volant des voitures haute performance les plus rapides au monde dans Need for Speed™ Hot Pursuit Remastered - Une expérience de course palpitante, compétitive et sociale. '),
+(105, '../Images/BannerHorizontal/Asphalt9BannerHorizontal.jpg', '../Images/Logos/Asphalt9Logo.png', 'https://store.steampowered.com/app/1815780', 'https://www.youtube.com/embed/rH-eZd01NEQ?si=i0lf14b1E1FChCxc', 'Éveillez votre esprit compétitif avec Asphalt Legends et courez ensemble ! Alliez-vous à d\'autres joueurs pour foncer dans des courses d\'arcade intenses, effectuez des cascades époustouflantes et filez vers la victoire au volant des meilleures hypercars ! '),
+(106, '../Images/BannerHorizontal/BeamNGBannerHorizontal.jpg', '../Images/Logos/BeamNGLogo.png', 'https://store.steampowered.com/app/284160', 'https://www.youtube.com/embed/7vGYVUCmxeI?si=5Gmsa0PcDEG2TgWh', 'Un simulateur de véhicules basé sur la dynamique des corps mous et capable de faire à peu près n\'importe quoi.'),
+(107, '../Images/BannerHorizontal/AssetoCorsaBannerHorizontal.jpg', '../Images/Logos/AssetoCorsaLogo.png', 'https://store.steampowered.com/app/244210', 'https://www.youtube.com/embed/TDFN-E30jhU?si=OG9hBBniiNhkoJqB', 'Assetto Corsa v1.16 ajoute le nouveau circuit « Laguna Seca » créé au laser, ainsi que 7 nouvelles voitures parmi lesquelles se trouve l\'Alfa Romeo Giulia Quadrifoglio, un modèle très attendu ! Consultez les notes de mise à jour pour en savoir plus !');
 
 -- --------------------------------------------------------
 
@@ -257,7 +264,14 @@ INSERT INTO `developpe` (`id_jeu`, `id_developpeur`) VALUES
 (97, 14),
 (98, 20),
 (99, 20),
-(100, 14);
+(100, 14),
+(101, 21),
+(102, 22),
+(103, 23),
+(104, 24),
+(105, 25),
+(106, 26),
+(107, 27);
 
 -- --------------------------------------------------------
 
@@ -297,7 +311,14 @@ INSERT INTO `developpeur` (`id_developpeur`, `nom`, `date_creation`, `adresse`, 
 (17, 'Focus Home Interactive', '1996-01-01', 'Paris, France', 'contact@focus-home.com'),
 (18, 'Klei Entertainment', '2005-01-01', 'Vancouver, Canada', 'contact@klei.com'),
 (19, 'Firaxis Games', '1996-10-01', 'Maryland, USA', 'contact@firaxis.com'),
-(20, 'Saber Interactive', '2001-01-01', 'Fort Lauderdale, Florida, USA', 'contact@sabersw.com');
+(20, 'Saber Interactive', '2001-01-01', 'Fort Lauderdale, Florida, USA', 'contact@sabersw.com'),
+(21, 'Sumo Digital', '2003-07-09', 'Sheffield, Angleterre', 'contact@sumodigital.com'),
+(22, 'Ghost Games', '2011-01-01', 'Gothenburg, Suède', 'contact@ea.com'),
+(23, 'Ubisoft Ivory Tower', '2007-10-15', 'Villeurbanne, France', 'contact@ubisoft.com'),
+(24, 'Stellar Entertainment Limited', '2008-01-01', 'Guildford, Angleterre', 'contact@stellarentltd.com'),
+(25, 'Gameloft', '1999-12-14', 'Paris, France', 'contact@gameloft.com'),
+(26, 'BeamNG', '2012-01-01', 'Brême, Allemagne', 'contact@beamng.com'),
+(27, 'Kunos Simulazioni', '2005-01-01', 'Campagnano di Roma, Italie', 'contact@kunossimulazioni.com');
 
 -- --------------------------------------------------------
 
@@ -414,7 +435,14 @@ INSERT INTO `edite` (`id_jeu`, `id_editeur`) VALUES
 (97, 14),
 (98, 21),
 (99, 21),
-(100, 14);
+(100, 14),
+(101, 23),
+(102, 5),
+(103, 6),
+(104, 5),
+(105, 26),
+(106, 27),
+(107, 28);
 
 -- --------------------------------------------------------
 
@@ -459,7 +487,10 @@ INSERT INTO `editeur` (`id_editeur`, `nom`, `date_creation`, `adresse`, `mail`) 
 (22, 'Sony Interactive Entertainment', '1993-11-16', 'Tokyo, Japan', 'contact@sony.com'),
 (23, 'Sega', '1960-06-03', 'Tokyo, Japan', 'contact@sega.com'),
 (24, 'Epic Games', '1991-01-01', 'Cary, North Carolina, USA', 'contact@epicgames.com'),
-(25, 'Klei Entertainment', '2005-01-01', 'Vancouver, Canada', 'contact@klei.com');
+(25, 'Klei Entertainment', '2005-01-01', 'Vancouver, Canada', 'contact@klei.com'),
+(26, 'Gameloft', '1999-12-14', 'Paris, France', 'contact@gameloft.com'),
+(27, 'BeamNG', '2012-01-01', 'Brême, Allemagne', 'contact@beamng.com'),
+(28, 'Kunos Simulazioni', '2005-01-01', 'Campagnano di Roma, Italie', 'contact@kunossimulazioni.com');
 
 -- --------------------------------------------------------
 
@@ -612,7 +643,14 @@ INSERT INTO `jeu` (`id_jeu`, `nom`, `date_de_sortie`, `note`, `lien`, `image`, `
 (97, 'Hollow Knight', '2017-02-24', 10, 'https://store.steampowered.com/app/367520', '../Images/BannerVertical/HollowKnightBannerVertical.jpg', 12),
 (98, 'Ori and the Blind Forest', '2016-04-27', 9, 'https://store.steampowered.com/app/387290', '../Images/BannerVertical/Ori1BannerVertical.jpg', 11),
 (99, 'Ori and the Will of the Wisps', '2020-03-11', 10, 'https://store.steampowered.com/app/1057090', '../Images/BannerVertical/Ori2BannerVertical.jpg', 11),
-(100, 'Celeste', '2018-01-25', 10, 'https://store.steampowered.com/app/504230', '../Images/BannerVertical/CelesteBannerVertical.jpg', 11);
+(100, 'Celeste', '2018-01-25', 10, 'https://store.steampowered.com/app/504230', '../Images/BannerVertical/CelesteBannerVertical.jpg', 11),
+(101, 'Sonic & All-Stars Racing Transformed', '2013-01-31', 9, 'https://store.steampowered.com/app/212480', '../Images/BannerVertical/SARTBannerVertical.jpg', 8),
+(102, 'Need for Speed : Heat', '2019-11-08', 8, 'https://store.steampowered.com/app/1222680', '../Images/BannerVertical//NFSHeatBannerVertical.jpg', 8),
+(103, 'The Crew : Motorfest', '2024-04-18', 8, 'https://store.steampowered.com/app/2698940', '../Images/BannerVertical/TheCrewMotorfestBannerVertical.jpg', 8),
+(104, 'Need for Speed : Hot Pursuit Remastered', '2020-11-06', 8, 'https://store.steampowered.com/app/1328660', '../Images/BannerVertical/NFSHotPursuitBannerVertical.jpg', 8),
+(105, 'Asphalt Legends', '2022-08-02', 8, 'https://store.steampowered.com/app/1815780', '../Images/BannerVertical/Asphalt9BannerVertical.jpg', 8),
+(106, 'BeamNGdrive', '2015-05-29', 10, 'https://store.steampowered.com/app/284160', '../Images/BannerVertical/BeamNGBannerVertical.jpg', 8),
+(107, 'Assetto Corsa', '2014-12-19', 9, 'https://store.steampowered.com/app/244210', '../Images/BannerVertical/AssetoCorsaBannerVertical.jpg', 8);
 
 -- --------------------------------------------------------
 
@@ -761,7 +799,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Contraintes pour les tables déchargées
