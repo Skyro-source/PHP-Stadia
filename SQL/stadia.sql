@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1deb1+deb12u1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:3306
--- Généré le : mar. 28 avr. 2026 à 14:46
--- Version du serveur : 10.11.14-MariaDB-0+deb12u2
--- Version de PHP : 8.2.29
+-- Hôte : 127.0.0.1
+-- Généré le : mer. 17 juin 2026 à 16:05
+-- Version du serveur : 10.4.32-MariaDB
+-- Version de PHP : 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -147,7 +147,15 @@ INSERT INTO `carrousel` (`id_jeu`, `image_horizontale`, `logo`, `lien_steam`, `l
 (104, '../Images/BannerHorizontal/NFSHotPursuitBannerHorizontal.jpg', '../Images/Logos/NFSHotPursuitLogo.png', 'https://store.steampowered.com/app/1328660', 'https://www.youtube.com/embed/HLiY6wwfGX4?si=6kJPLGx_VFSAfnYR', 'Ressentez le frisson de la poursuite et l\'adrénaline de l\'évasion au volant des voitures haute performance les plus rapides au monde dans Need for Speed™ Hot Pursuit Remastered - Une expérience de course palpitante, compétitive et sociale. '),
 (105, '../Images/BannerHorizontal/Asphalt9BannerHorizontal.jpg', '../Images/Logos/Asphalt9Logo.png', 'https://store.steampowered.com/app/1815780', 'https://www.youtube.com/embed/rH-eZd01NEQ?si=i0lf14b1E1FChCxc', 'Éveillez votre esprit compétitif avec Asphalt Legends et courez ensemble ! Alliez-vous à d\'autres joueurs pour foncer dans des courses d\'arcade intenses, effectuez des cascades époustouflantes et filez vers la victoire au volant des meilleures hypercars ! '),
 (106, '../Images/BannerHorizontal/BeamNGBannerHorizontal.jpg', '../Images/Logos/BeamNGLogo.png', 'https://store.steampowered.com/app/284160', 'https://www.youtube.com/embed/7vGYVUCmxeI?si=5Gmsa0PcDEG2TgWh', 'Un simulateur de véhicules basé sur la dynamique des corps mous et capable de faire à peu près n\'importe quoi.'),
-(107, '../Images/BannerHorizontal/AssetoCorsaBannerHorizontal.jpg', '../Images/Logos/AssetoCorsaLogo.png', 'https://store.steampowered.com/app/244210', 'https://www.youtube.com/embed/TDFN-E30jhU?si=OG9hBBniiNhkoJqB', 'Assetto Corsa v1.16 ajoute le nouveau circuit « Laguna Seca » créé au laser, ainsi que 7 nouvelles voitures parmi lesquelles se trouve l\'Alfa Romeo Giulia Quadrifoglio, un modèle très attendu ! Consultez les notes de mise à jour pour en savoir plus !');
+(107, '../Images/BannerHorizontal/AssetoCorsaBannerHorizontal.jpg', '../Images/Logos/AssetoCorsaLogo.png', 'https://store.steampowered.com/app/244210', 'https://www.youtube.com/embed/TDFN-E30jhU?si=OG9hBBniiNhkoJqB', 'Assetto Corsa v1.16 ajoute le nouveau circuit « Laguna Seca » créé au laser, ainsi que 7 nouvelles voitures parmi lesquelles se trouve l\'Alfa Romeo Giulia Quadrifoglio, un modèle très attendu ! Consultez les notes de mise à jour pour en savoir plus !'),
+(108, '../Images/BannerHorizontal/ForzaHorizon6BannerHorizontal.jpg', '../Images/Logos/ForzaHorizon6Logo.png', 'https://store.steampowered.com/app/2483190', 'https://www.youtube.com/embed/oYhaW-Vr4wg?si=2bEamEuyTZo5Cqcr', 'Découvrez les paysages à couper le souffle du Japon au volant de plus de 550 voitures réelles et devenez une légende de la course automobile dans la plus grande aventure motorisée Forza Horizon à ce jour.'),
+(109, '../Images/BannerHorizontal/NFSUnboundBannerHorizontal.jpg', '../Images/Logos/NFSUnboundLogo.png', 'https://store.steampowered.com/app/1846380', 'https://www.youtube.com/embed/H2Y8XCe7F9E?si=D_aGMETDUJ_t0Bl1', 'Pour atteindre le sommet, pas le droit à l’erreur ! Défiez la police et participez aux qualifications pour participer au Grand, la course de rue ultime. Sublimez votre garage avec des voitures ultra personalisées, et brillez grâce à votre style unique.');
+INSERT INTO `carrousel` (`id_jeu`, `image_horizontale`, `logo`, `lien_steam`, `lien_youtube`, `description`) VALUES
+(110, '../Images/BannerHorizontal/SGARBannerHorizontal.jpg', '../Images/Logos/SGARLogo.png', 'https://store.steampowered.com/app/2918300', 'https://www.youtube.com/embed/NKUPFtZ4S00?si=A0dzA24rwRt22wVH', 'SPLITGATE: Arena Reloaded fusionne le meilleur de Splitgate 1 et 2, ramenant cette sensation de shooter d\'arène classique. Jouez gratuitement dès maintenant.'),
+(111, '../Images/BannerHorizontal/BatmanAABannerHorizontal.jpg', '../Images/Logos/BatmanAALogo.png', 'https://store.steampowered.com/app/35140', 'https://www.youtube.com/embed/T8bu2Y_cZb8?si=McCwCpLteeoDz2o1', 'Soyez Batman et affrontez les super-vilains de Gotham City. Parcourez l\'asile d\'Arkham et son île terrifiante.'),
+(112, '../Images/BannerHorizontal/BatmanACBannerHorizontal.jpg', '../Images/Logos/BatmanACLogo.png', 'https://store.steampowered.com/app/200260', 'https://www.youtube.com/embed/MlX--IPxTRU?si=3Qtarcge189VpNLM', 'Batman: Arkham City s’appuie sur l’intensité et l’atmosphère saisissante de Batman: Arkham Asylum, et propulse les joueurs en plein cœur d’Arkham City - un monde ouvert cinq fois plus vaste que celui de Batman: Arkham Asylum.'),
+(113, '../Images/BannerHorizontal/BatmanAOBannerHorizontal.jpg', '../Images/Logos/BatmanAOLogo.png', 'https://store.steampowered.com/app/209000', 'https://www.youtube.com/embed/9pnK8akbd2M?si=DtIQoaQqR9JKaOCA', 'Batman™: Arkham Origins est le prochain opus de la série de jeux vidéo à succès des Batman : Arkham. Développé par WB Games Montréal, le jeu vous fait découvrir une Gotham City agrandie dans une préquelle originale et intrigante qui se déroulé plusieurs années avant les événements de Batman: Arkham Asylum et Batman: Arkham City.'),
+(114, '../Images/BannerHorizontal/BatmanAKBannerHorizontal.jpg', '../Images/Logos/BatmanAKLogo.png', 'https://store.steampowered.com/app/208650', 'https://www.youtube.com/embed/FX1uGqXD2n8?si=cMQbywdkgu2pQo-y', 'Batman™: Arkham Knight marque le dénouement épique de la trilogie primée Arkham, créée par les studios Rocksteady. Développé exclusivement pour les consoles nouvelle génération, Batman: Arkham Knight introduit une version unique de la Batmobile, créée par Rocksteady.');
 
 -- --------------------------------------------------------
 
@@ -271,7 +279,14 @@ INSERT INTO `developpe` (`id_jeu`, `id_developpeur`) VALUES
 (104, 24),
 (105, 25),
 (106, 26),
-(107, 27);
+(107, 27),
+(108, 28),
+(109, 29),
+(110, 30),
+(111, 31),
+(112, 31),
+(113, 32),
+(114, 31);
 
 -- --------------------------------------------------------
 
@@ -281,44 +296,46 @@ INSERT INTO `developpe` (`id_jeu`, `id_developpeur`) VALUES
 
 CREATE TABLE `developpeur` (
   `id_developpeur` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `date_creation` date NOT NULL,
-  `adresse` varchar(255) NOT NULL,
-  `mail` varchar(255) NOT NULL
+  `nom` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `developpeur`
 --
 
-INSERT INTO `developpeur` (`id_developpeur`, `nom`, `date_creation`, `adresse`, `mail`) VALUES
-(1, 'Valve Corporation', '1996-08-24', 'Bellevue, Washington, USA', 'contact@valvesoftware.com'),
-(2, 'Rockstar North', '1988-12-07', 'Edinburgh, Scotland, UK', 'contact@rockstarnorth.com'),
-(3, 'CD Projekt Red', '2002-05-01', 'Warsaw, Poland', 'contact@cdprojektred.com'),
-(4, 'FromSoftware', '1986-11-01', 'Tokyo, Japan', 'contact@fromsoftware.jp'),
-(5, 'Respawn Entertainment', '2010-04-12', 'Los Angeles, California, USA', 'contact@respawn.com'),
-(6, 'Obsidian Entertainment', '2003-06-15', 'Irvine, California, USA', 'contact@obsidian.net'),
-(7, 'Epic Games', '1991-01-01', 'Cary, North Carolina, USA', 'contact@epicgames.com'),
-(8, 'Treyarch', '1996-01-01', 'Santa Monica, California, USA', 'contact@treyarch.com'),
-(9, 'MachineGames', '2009-01-01', 'Uppsala, Sweden', 'contact@machinegames.com'),
-(10, 'Naughty Dog', '1984-09-27', 'Santa Monica, California, USA', 'contact@naughtydog.com'),
-(11, 'ConcernedApe', '2012-01-01', 'Seattle, Washington, USA', 'contact@concernedape.com'),
-(12, 'Facepunch Studios', '2004-01-01', 'Birmingham, UK', 'contact@facepunch.com'),
-(13, 'Wildcard Studios', '2011-01-01', 'Seattle, Washington, USA', 'contact@wildcardstudios.com'),
-(14, 'Supergiant Games', '2009-01-01', 'San Francisco, California, USA', 'contact@supergiantgames.com'),
-(15, 'Behaviour Interactive', '1992-01-01', 'Montreal, Canada', 'contact@behaviourinteractive.com'),
-(16, 'RedLynx', '1998-01-01', 'Helsinki, Finland', 'contact@redlynx.com'),
-(17, 'Focus Home Interactive', '1996-01-01', 'Paris, France', 'contact@focus-home.com'),
-(18, 'Klei Entertainment', '2005-01-01', 'Vancouver, Canada', 'contact@klei.com'),
-(19, 'Firaxis Games', '1996-10-01', 'Maryland, USA', 'contact@firaxis.com'),
-(20, 'Saber Interactive', '2001-01-01', 'Fort Lauderdale, Florida, USA', 'contact@sabersw.com'),
-(21, 'Sumo Digital', '2003-07-09', 'Sheffield, Angleterre', 'contact@sumodigital.com'),
-(22, 'Ghost Games', '2011-01-01', 'Gothenburg, Suède', 'contact@ea.com'),
-(23, 'Ubisoft Ivory Tower', '2007-10-15', 'Villeurbanne, France', 'contact@ubisoft.com'),
-(24, 'Stellar Entertainment Limited', '2008-01-01', 'Guildford, Angleterre', 'contact@stellarentltd.com'),
-(25, 'Gameloft', '1999-12-14', 'Paris, France', 'contact@gameloft.com'),
-(26, 'BeamNG', '2012-01-01', 'Brême, Allemagne', 'contact@beamng.com'),
-(27, 'Kunos Simulazioni', '2005-01-01', 'Campagnano di Roma, Italie', 'contact@kunossimulazioni.com');
+INSERT INTO `developpeur` (`id_developpeur`, `nom`) VALUES
+(1, 'Valve Corporation'),
+(2, 'Rockstar North'),
+(3, 'CD Projekt Red'),
+(4, 'FromSoftware'),
+(5, 'Respawn Entertainment'),
+(6, 'Obsidian Entertainment'),
+(7, 'Epic Games'),
+(8, 'Treyarch'),
+(9, 'MachineGames'),
+(10, 'Naughty Dog'),
+(11, 'ConcernedApe'),
+(12, 'Facepunch Studios'),
+(13, 'Wildcard Studios'),
+(14, 'Supergiant Games'),
+(15, 'Behaviour Interactive'),
+(16, 'RedLynx'),
+(17, 'Focus Home Interactive'),
+(18, 'Klei Entertainment'),
+(19, 'Firaxis Games'),
+(20, 'Saber Interactive'),
+(21, 'Sumo Digital'),
+(22, 'Ghost Games'),
+(23, 'Ubisoft Ivory Tower'),
+(24, 'Stellar Entertainment Limited'),
+(25, 'Gameloft'),
+(26, 'BeamNG'),
+(27, 'Kunos Simulazioni'),
+(28, 'Playground Games'),
+(29, 'Criterion Games'),
+(30, '1047 Games'),
+(31, 'Rocksteady'),
+(32, 'Warner Bros Montreal');
 
 -- --------------------------------------------------------
 
@@ -442,7 +459,14 @@ INSERT INTO `edite` (`id_jeu`, `id_editeur`) VALUES
 (104, 5),
 (105, 26),
 (106, 27),
-(107, 28);
+(107, 28),
+(108, 29),
+(109, 5),
+(110, 30),
+(111, 19),
+(112, 19),
+(113, 19),
+(114, 19);
 
 -- --------------------------------------------------------
 
@@ -452,45 +476,44 @@ INSERT INTO `edite` (`id_jeu`, `id_editeur`) VALUES
 
 CREATE TABLE `editeur` (
   `id_editeur` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `date_creation` date NOT NULL,
-  `adresse` varchar(255) NOT NULL,
-  `mail` varchar(255) NOT NULL
+  `nom` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `editeur`
 --
 
-INSERT INTO `editeur` (`id_editeur`, `nom`, `date_creation`, `adresse`, `mail`) VALUES
-(1, 'Valve Corporation', '1996-08-24', 'Bellevue, Washington, USA', 'contact@valvesoftware.com'),
-(2, 'Rockstar Games', '1998-12-01', 'New York, USA', 'contact@rockstargames.com'),
-(3, 'CD Projekt', '1994-05-01', 'Warsaw, Poland', 'contact@cdprojekt.com'),
-(4, 'FromSoftware', '1986-11-01', 'Tokyo, Japan', 'contact@fromsoftware.jp'),
-(5, 'Electronic Arts', '1982-05-28', 'Redwood City, California, USA', 'contact@ea.com'),
-(6, 'Ubisoft', '1986-03-28', 'Montreuil, France', 'contact@ubisoft.com'),
-(7, 'Activision', '1979-10-01', 'Santa Monica, California, USA', 'contact@activision.com'),
-(8, 'Bethesda Softworks', '1986-06-28', 'Rockville, Maryland, USA', 'contact@bethesda.net'),
-(9, 'Square Enix', '1975-09-22', 'Tokyo, Japan', 'contact@square-enix.com'),
-(10, 'Capcom', '1979-05-30', 'Osaka, Japan', 'contact@capcom.com'),
-(11, 'Bandai Namco Entertainment', '2006-03-31', 'Tokyo, Japan', 'contact@bandainamcoent.com'),
-(12, 'Paradox Interactive', '1999-01-01', 'Stockholm, Sweden', 'contact@paradoxplaza.com'),
-(13, 'Coffee Stain Publishing', '2017-01-01', 'Skövde, Sweden', 'contact@coffeestainstudios.com'),
-(14, 'Raw Fury', '2015-01-01', 'Stockholm, Sweden', 'contact@rawfury.com'),
-(15, 'Devolver Digital', '2009-01-01', 'Austin, Texas, USA', 'contact@devolverdigital.com'),
-(16, 'Team17', '1990-12-07', 'Wakefield, UK', 'contact@team17.com'),
-(17, 'Focus Entertainment', '1996-01-01', 'Paris, France', 'contact@focus-entmt.com'),
-(18, '505 Games', '2006-01-01', 'Milan, Italy', 'contact@505games.com'),
-(19, 'Warner Bros. Games', '2004-01-14', 'Burbank, California, USA', 'contact@wbgames.com'),
-(20, 'Take-Two Interactive', '1993-09-30', 'New York, USA', 'contact@take2games.com'),
-(21, 'Microsoft', '1975-04-04', 'Redmond, Washington, USA', 'contact@microsoft.com'),
-(22, 'Sony Interactive Entertainment', '1993-11-16', 'Tokyo, Japan', 'contact@sony.com'),
-(23, 'Sega', '1960-06-03', 'Tokyo, Japan', 'contact@sega.com'),
-(24, 'Epic Games', '1991-01-01', 'Cary, North Carolina, USA', 'contact@epicgames.com'),
-(25, 'Klei Entertainment', '2005-01-01', 'Vancouver, Canada', 'contact@klei.com'),
-(26, 'Gameloft', '1999-12-14', 'Paris, France', 'contact@gameloft.com'),
-(27, 'BeamNG', '2012-01-01', 'Brême, Allemagne', 'contact@beamng.com'),
-(28, 'Kunos Simulazioni', '2005-01-01', 'Campagnano di Roma, Italie', 'contact@kunossimulazioni.com');
+INSERT INTO `editeur` (`id_editeur`, `nom`) VALUES
+(1, 'Valve Corporation'),
+(2, 'Rockstar Games'),
+(3, 'CD Projekt'),
+(4, 'FromSoftware'),
+(5, 'Electronic Arts'),
+(6, 'Ubisoft'),
+(7, 'Activision'),
+(8, 'Bethesda Softworks'),
+(9, 'Square Enix'),
+(10, 'Capcom'),
+(11, 'Bandai Namco Entertainment'),
+(12, 'Paradox Interactive'),
+(13, 'Coffee Stain Publishing'),
+(14, 'Raw Fury'),
+(15, 'Devolver Digital'),
+(16, 'Team17'),
+(17, 'Focus Entertainment'),
+(18, '505 Games'),
+(19, 'Warner Bros. Games'),
+(20, 'Take-Two Interactive'),
+(21, 'Microsoft'),
+(22, 'Sony Interactive Entertainment'),
+(23, 'Sega'),
+(24, 'Epic Games'),
+(25, 'Klei Entertainment'),
+(26, 'Gameloft'),
+(27, 'BeamNG'),
+(28, 'Kunos Simulazioni'),
+(29, 'Xbox Games Studios'),
+(30, '1047 Games');
 
 -- --------------------------------------------------------
 
@@ -650,7 +673,14 @@ INSERT INTO `jeu` (`id_jeu`, `nom`, `date_de_sortie`, `note`, `lien`, `image`, `
 (104, 'Need for Speed : Hot Pursuit Remastered', '2020-11-06', 8, 'https://store.steampowered.com/app/1328660', '../Images/BannerVertical/NFSHotPursuitBannerVertical.jpg', 8),
 (105, 'Asphalt Legends', '2022-08-02', 8, 'https://store.steampowered.com/app/1815780', '../Images/BannerVertical/Asphalt9BannerVertical.jpg', 8),
 (106, 'BeamNGdrive', '2015-05-29', 10, 'https://store.steampowered.com/app/284160', '../Images/BannerVertical/BeamNGBannerVertical.jpg', 8),
-(107, 'Assetto Corsa', '2014-12-19', 9, 'https://store.steampowered.com/app/244210', '../Images/BannerVertical/AssetoCorsaBannerVertical.jpg', 8);
+(107, 'Assetto Corsa', '2014-12-19', 9, 'https://store.steampowered.com/app/244210', '../Images/BannerVertical/AssetoCorsaBannerVertical.jpg', 8),
+(108, 'Forza Horizon 6', '2026-05-19', 9, 'https://store.steampowered.com/app/2483190', '../Images/BannerVertical/ForzaHorizon6BannerVertical.jpg', 8),
+(109, 'Need for Speed : Unbound', '2022-12-02', 6, 'https://store.steampowered.com/app/1846380', '../Images/BannerVertical/NFSUnboundBannerVertical.jpg', 8),
+(110, 'SPLITGATE : Arena Reloaded', '2025-05-22', 7, 'https://store.steampowered.com/app/2918300', '../Images/BannerVertical/SGARBannerVertical.jpg', 4),
+(111, 'Batman Arkham Asylum', '2009-08-25', 9, 'https://store.steampowered.com/app/35140', '../Images/BannerVertical/BatmanAABannerVertical.jpg', 2),
+(112, 'Batman Arkham City', '2011-10-18', 9, 'https://store.steampowered.com/app/200260', '../Images/BannerVertical/BatmanACBannerVertical.jpg', 2),
+(113, 'Batman Arkham Origins', '2013-10-25', 8, 'https://store.steampowered.com/app/209000', '../Images/BannerVertical/BatmanAOBannerVertical.jpg', 2),
+(114, 'Batman Arkham Knight', '2015-06-23', 9, 'https://store.steampowered.com/app/208650', '../Images/BannerVertical/BatmanAKBannerVertical.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -690,43 +720,6 @@ CREATE TABLE `utilisateurs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `utilisateurs`
---
-
-INSERT INTO `utilisateurs` (`idUtilisateur`, `nom`, `prenom`, `date_de_naissance`, `pseudonyme`, `telephone`, `email`, `mot_de_passe`) VALUES
-(2, 'Pourny', 'Josh', '2025-02-11', 'josh', '0606060606', 'a@a.a', 'aa'),
-(3, 'Dupont', 'Marie', '1995-10-17', 'MarieD95', '0612345678', 'mmarie.dupont@example.com', 'mdp123'),
-(4, 'Laurent', 'Lili', '1997-12-12', 'MarieD95', '0787654321', 'lucas.martin@test.fr', '$2y$10$pytsbTKfmdFC9eT6E96PFuQULIU.XF5P/35bWdt1CjKQ82Ik4tJY6'),
-(5, 'Bernard', 'Sophie', '1998-12-03', 'Soso88', '0655443322', 'sophie.bernard@mail.com', '$2y$10$QWztbAdpiKDnht.x4eSTnecu7akmsM535Xz9VDAQOf/fCN7DQTQtC'),
-(9, 'sbr', 'sbr', '2006-10-26', 'sbr', '0629835716', 'sbr@gmail.com', '$2y$10$uLiLoPZ6O0IrMLI5pHaxXuPmqgX7J8hmmF.ltyEgWLcXN3xhr8pWe'),
-(10, 'test', 'test', '2026-04-22', 'test', '0695687396', 'test@test.test', '$2y$10$.IFpTs/BlmoFHjQ2ki7ZteDcBkTLgxvluT9gVndAR/zUcDcJQWjPy');
-
--- --------------------------------------------------------
-
---
--- Doublure de structure pour la vue `vue_jeux_complets`
--- (Voir ci-dessous la vue réelle)
---
-CREATE TABLE `vue_jeux_complets` (
-`id_jeu` int(11)
-,`nom_jeu` varchar(255)
-,`developpeur` varchar(255)
-,`editeur` varchar(255)
-,`genre` varchar(255)
-,`date_de_sortie` date
-,`note` int(2)
-);
-
--- --------------------------------------------------------
-
---
--- Structure de la vue `vue_jeux_complets`
---
-DROP TABLE IF EXISTS `vue_jeux_complets`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vue_jeux_complets`  AS SELECT `j`.`id_jeu` AS `id_jeu`, `j`.`nom` AS `nom_jeu`, `d`.`nom` AS `developpeur`, `e`.`nom` AS `editeur`, `g`.`libelle` AS `genre`, `j`.`date_de_sortie` AS `date_de_sortie`, `j`.`note` AS `note` FROM (((((`jeu` `j` join `developpe` `dp` on(`j`.`id_jeu` = `dp`.`id_jeu`)) join `developpeur` `d` on(`dp`.`id_developpeur` = `d`.`id_developpeur`)) join `edite` `ed` on(`j`.`id_jeu` = `ed`.`id_jeu`)) join `editeur` `e` on(`ed`.`id_editeur` = `e`.`id_editeur`)) join `genre` `g` on(`j`.`fkGenre` = `g`.`id_genre`)) ;
-
---
 -- Index pour les tables déchargées
 --
 
@@ -734,36 +727,32 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- Index pour la table `carrousel`
 --
 ALTER TABLE `carrousel`
-  ADD PRIMARY KEY (`id_jeu`),
-  ADD KEY `id_jeu` (`id_jeu`);
+  ADD PRIMARY KEY (`id_jeu`);
 
 --
 -- Index pour la table `developpe`
 --
 ALTER TABLE `developpe`
-  ADD PRIMARY KEY (`id_jeu`,`id_developpeur`),
-  ADD KEY `id_developpeur` (`id_developpeur`);
+  ADD KEY `id_jeu` (`id_jeu`,`id_developpeur`);
 
 --
 -- Index pour la table `developpeur`
 --
 ALTER TABLE `developpeur`
-  ADD PRIMARY KEY (`id_developpeur`),
-  ADD KEY `mail` (`mail`);
+  ADD PRIMARY KEY (`id_developpeur`);
 
 --
 -- Index pour la table `edite`
 --
 ALTER TABLE `edite`
-  ADD PRIMARY KEY (`id_jeu`,`id_editeur`),
-  ADD KEY `id_editeur` (`id_editeur`);
+  ADD KEY `id_editeur` (`id_editeur`),
+  ADD KEY `id_editeur_2` (`id_editeur`);
 
 --
 -- Index pour la table `editeur`
 --
 ALTER TABLE `editeur`
-  ADD PRIMARY KEY (`id_editeur`),
-  ADD KEY `mail` (`mail`);
+  ADD PRIMARY KEY (`id_editeur`);
 
 --
 -- Index pour la table `genre`
@@ -775,55 +764,13 @@ ALTER TABLE `genre`
 -- Index pour la table `jeu`
 --
 ALTER TABLE `jeu`
-  ADD PRIMARY KEY (`id_jeu`),
-  ADD KEY `fk_jeu_genre` (`fkGenre`);
+  ADD PRIMARY KEY (`id_jeu`);
 
 --
 -- Index pour la table `preferences`
 --
 ALTER TABLE `preferences`
-  ADD PRIMARY KEY (`fkUtilisateur`);
-
---
--- Index pour la table `utilisateurs`
---
-ALTER TABLE `utilisateurs`
-  ADD PRIMARY KEY (`idUtilisateur`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `utilisateurs`
---
-ALTER TABLE `utilisateurs`
-  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `developpe`
---
-ALTER TABLE `developpe`
-  ADD CONSTRAINT `developpe_ibfk_1` FOREIGN KEY (`id_jeu`) REFERENCES `jeu` (`id_jeu`),
-  ADD CONSTRAINT `developpe_ibfk_2` FOREIGN KEY (`id_developpeur`) REFERENCES `developpeur` (`id_developpeur`);
-
---
--- Contraintes pour la table `edite`
---
-ALTER TABLE `edite`
-  ADD CONSTRAINT `edite_ibfk_1` FOREIGN KEY (`id_jeu`) REFERENCES `jeu` (`id_jeu`),
-  ADD CONSTRAINT `edite_ibfk_2` FOREIGN KEY (`id_editeur`) REFERENCES `editeur` (`id_editeur`);
-
---
--- Contraintes pour la table `jeu`
---
-ALTER TABLE `jeu`
-  ADD CONSTRAINT `fk_jeu_genre` FOREIGN KEY (`fkGenre`) REFERENCES `genre` (`id_genre`);
+  ADD KEY `fkUtilisateur` (`fkUtilisateur`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
