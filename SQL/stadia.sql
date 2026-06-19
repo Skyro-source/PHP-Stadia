@@ -335,7 +335,46 @@ INSERT INTO `developpeur` (`id_developpeur`, `nom`) VALUES
 (29, 'Criterion Games'),
 (30, '1047 Games'),
 (31, 'Rocksteady'),
-(32, 'Warner Bros Montreal');
+(32, 'Warner Bros Montreal'),
+(33, 'PUBG CORPORATION'),
+(34, 'Rockstar Games'),
+(35, 'Re-Logic'),
+(36, 'Sports Interactive'),
+(37, 'Colossal Order'),
+(38, 'Paradox Development Studio'),
+(39, 'CREATIVE ASSEMBLY'),
+(40, 'Innersloth'),
+(41, 'Kinetic Games'),
+(42, 'Iron Gate'),
+(43, 'Ubisoft Montreal'),
+(44, 'Digital Extremes'),
+(45, 'Bungie'),
+(46, 'CAPCOM Co., Ltd.'),
+(47, 'Mediatonic'),
+(48, 'OVERKILL - A Starbreeze Studio'),
+(49, 'Wube Software LTD.'),
+(50, 'Coffee Stain Studios'),
+(51, 'Hello Games'),
+(52, 'Ludeon Studios'),
+(53, 'The Indie Stone'),
+(54, 'Unknown World Entertainment'),
+(55, 'Endnight Games Ltd'),
+(56, 'Rare Ltd'),
+(57, 'Asobo Studios'),
+(58, 'SCS Software'),
+(59, 'Squad'),
+(60, 'Gearbox Software'),
+(61, 'Irrational Games'),
+(62, 'id Software'),
+(63, 'Bethesda Game Studios'),
+(64, 'BioWare'),
+(65, 'Ubisoft'),
+(68, 'IO Interactive'),
+(69, 'KOEI TECMO GAMES CO., LTD.'),
+(70, 'One More Level'),
+(71, 'Remedy Entertainment'),
+(72, 'Maxis'),
+
 
 -- --------------------------------------------------------
 
@@ -677,10 +716,10 @@ INSERT INTO `jeu` (`id_jeu`, `nom`, `date_de_sortie`, `note`, `lien`, `image`, `
 (108, 'Forza Horizon 6', '2026-05-19', 9, 'https://store.steampowered.com/app/2483190', '../Images/BannerVertical/ForzaHorizon6BannerVertical.jpg', 8),
 (109, 'Need for Speed : Unbound', '2022-12-02', 6, 'https://store.steampowered.com/app/1846380', '../Images/BannerVertical/NFSUnboundBannerVertical.jpg', 8),
 (110, 'SPLITGATE : Arena Reloaded', '2025-05-22', 7, 'https://store.steampowered.com/app/2918300', '../Images/BannerVertical/SGARBannerVertical.jpg', 4),
-(111, 'Batman Arkham Asylum', '2009-08-25', 9, 'https://store.steampowered.com/app/35140', '../Images/BannerVertical/BatmanAABannerVertical.jpg', 2),
-(112, 'Batman Arkham City', '2011-10-18', 9, 'https://store.steampowered.com/app/200260', '../Images/BannerVertical/BatmanACBannerVertical.jpg', 2),
-(113, 'Batman Arkham Origins', '2013-10-25', 8, 'https://store.steampowered.com/app/209000', '../Images/BannerVertical/BatmanAOBannerVertical.jpg', 2),
-(114, 'Batman Arkham Knight', '2015-06-23', 9, 'https://store.steampowered.com/app/208650', '../Images/BannerVertical/BatmanAKBannerVertical.jpg', 2);
+(111, 'Batman : Arkham Asylum', '2009-08-25', 9, 'https://store.steampowered.com/app/35140', '../Images/BannerVertical/BatmanAABannerVertical.jpg', 2),
+(112, 'Batman : Arkham City', '2011-10-18', 9, 'https://store.steampowered.com/app/200260', '../Images/BannerVertical/BatmanACBannerVertical.jpg', 2),
+(113, 'Batman : Arkham Origins', '2013-10-25', 8, 'https://store.steampowered.com/app/209000', '../Images/BannerVertical/BatmanAOBannerVertical.jpg', 2),
+(114, 'Batman : Arkham Knight', '2015-06-23', 9, 'https://store.steampowered.com/app/208650', '../Images/BannerVertical/BatmanAKBannerVertical.jpg', 2);
 
 -- --------------------------------------------------------
 
